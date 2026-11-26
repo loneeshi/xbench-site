@@ -75,5 +75,41 @@ const recordings = {
       "label": "Scripted · two-wheel RB-Y1 A · paused clock",
       "outcome": "The recording is labelled successful, but the registry accepts only segments because the full episode record is missing."
     }
+  ],
+  "W01": [
+    {
+      "file": "media/w01-scripted.mp4",
+      "originalSha256": "d666a5de1c9054f3c18e84eeecc715445100f000c0cf34609659900432e60246",
+      "publicSha256": "e715e9dca263ec7f3b1dac51cdbc4274e6ed8d857627bcabbc7fe6d72643d6bd",
+      "label": "Scripted · force-limited virtual planar base · clock not recorded",
+      "outcome": "Paired script: A waits inside the forklift lane and is hit (failure, 114.6 s); B waits outside, then crosses (success, 169.0 s)."
+    }
+  ],
+  "W02": [
+    {
+      "file": "media/w02-scripted.mp4",
+      "originalSha256": "054f0797910cba4c2711a4798767a7778e6d647bb4ef2778c8cd2407a27d078e",
+      "publicSha256": "6d34d453cefeea84c00812c7909f906dacb106db29ea41676b6040f071e05e94",
+      "label": "Scripted · force-limited virtual planar base · clock not recorded",
+      "outcome": "Partial: only the second half, started from a saved state, passed. The full episode is not accepted."
+    }
+  ],
+  "W03": [
+    {
+      "file": "media/w03-scripted.mp4",
+      "originalSha256": "629fd00e9bd13e67c0d4d38cf1b05503a6bfa7ad394bc8c4bc95bb8dcde6d5d5",
+      "publicSha256": "4b492cc247d41b5fb0d57d3dca116aa5fcaf7365025e31aba1bcb70b96ba9d2b",
+      "label": "Scripted · force-limited virtual planar base · clock not recorded",
+      "outcome": "Paired script: A sends the empty tray first (failure, 272.8 s); B loads the cargo before sending (success, 453.8 s)."
+    }
+  ],
+  "W04": [
+    {
+      "file": "media/w04-scripted.mp4",
+      "originalSha256": "18607be1e37692fb6d564ff787f1fffcde49e347f1a505e3e28662c8f18af7b8",
+      "publicSha256": "e9d6b533c19346a5e40b424bd87a1212fae75e7be6b1f342048784c10f2ef2cb",
+      "label": "Scripted probe · force-limited virtual planar base · clock not recorded",
+      "outcome": "Partial: an unassisted two-hand grasp of the moving box passed. The full episode with a box already in hand is not finished."
+    }
   ]
 };
