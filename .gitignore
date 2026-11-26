@@ -1,0 +1,24 @@
+# Only reviewed public files enter the repository.
+*
+!/.gitignore
+!/README.md
+!/CONTRIBUTING.md
+!/index.html
+!/task.html
+!/style.css
+!/app.js
+!/catalog.js
+!/examples.js
+!/media/
+!/media/k03-old-flow.mp4
+!/media/o02-scripted.mp4
+!/images/
+!/images/n01-scene.png
+!/images/n01-head.png
+!/images/k03-scene.png
+!/images/k03-head.png
+!/images/o02-poster.jpg
+!/media-records.js
+!/.github/
+!/.github/workflows/
+!/.github/workflows/pages.yml
