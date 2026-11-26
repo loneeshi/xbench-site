@@ -2,15 +2,23 @@
 const byId = id => document.getElementById(id);
 const escapeText = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function demoStatus(clips, hasImages) {
-  const labels = {teleop: 'Human teleop demo · 人类遥操作', scripted: 'Scripted demo · 脚本演示', mechanism: 'Scene video · 场景视频'};
-  for (const kind of ['teleop', 'scripted', 'mechanism']) {
+  // One chip per kind of content the task has, so readers see what is inside.
+  const kinds = [
+    ['teleop', 'Teleop demo · 遥操作 demo'],
+    ['scripted', 'Scripted demo · 脚本 demo'],
+    ['mechanism', 'Scene demo · 场景 demo']
+  ];
+  const chips = [];
+  for (const [kind, label] of kinds) {
     const matches = clips.filter(clip => clip.kind === kind);
     if (!matches.length) continue;
-    const scope = ['full', 'partial', 'old-design'].find(value => matches.some(clip => clip.scope === value));
-    const qualifier = scope === 'partial' ? 'partial · 部分完成' : scope === 'old-design' ? 'old design · 旧设计' : '';
-    return {kind, label: labels[kind], qualifier};
+    const full = matches.some(clip => clip.scope === 'full');
+    const qualifier = full ? '' : matches.some(clip => clip.scope === 'partial') ? 'partial · 部分完成' : matches.some(clip => clip.scope === 'old-design') ? 'old design · 旧设计' : '';
+    chips.push({kind, label, qualifier});
   }
-  return hasImages ? {kind: 'images', label: 'Screenshots · 只有截图'} : {kind: 'pending', label: 'Pending · 待定'};
+  if (hasImages) chips.push({kind: 'images', label: 'Screenshots · 截图'});
+  if (!chips.length) chips.push({kind: 'pending', label: 'Nothing yet · 暂无'});
+  return chips;
 }
 function catalogueView() {
   const filters = ['scene', 'dynamic', 'efficiency'];
@@ -19,8 +27,7 @@ function catalogueView() {
     byId('count').textContent = tasks.length + ' of ' + catalogue.length;
     byId('rows').innerHTML = tasks.map(t => {
       const profile = examples[t.id] ? '<a href="task.html?id='+t.id+'">Open profile</a>' : 'Pending';
-      const status = demoStatus(recordings[t.id] || [], examples[t.id]?.images.length);
-      const badge = '<span class="demo-badge '+status.kind+'">'+status.label+(status.qualifier ? '<small>'+status.qualifier+'</small>' : '')+'</span>';
+      const badge = demoStatus(recordings[t.id] || [], examples[t.id]?.images.length).map(c => '<span class="demo-badge '+c.kind+'">'+c.label+(c.qualifier ? '<small>'+c.qualifier+'</small>' : '')+'</span>').join('');
       return '<tr>'+[t.id,t.title,t.scene,t.dynamic,t.efficiency].map(v=>'<td>'+escapeText(v)+'</td>').join('')+'<td><div class="profile-actions">'+badge+profile+'</div></td></tr>';
     }).join('') || '<tr><td colspan="6">No tasks match these filters.</td></tr>';
   }
@@ -41,8 +48,8 @@ function profileView() {
   const e=escapeText, clips=recordings[id] || [];
   document.title=id+' · '+task.title+' · XBench';
   const gallery=p.images.map(img=>`<figure><img src="${e(img.src)}" alt="${e(id+' · '+img.view)}"><figcaption>${e(img.view)} · RB-Y1 M v1.3</figcaption></figure>`).join('');
-  const video=clips.map(clip => `<figure><video controls playsinline preload="metadata" src="${e(clip.file)}"></video><figcaption>${e(clip.label)}<small>${e(clip.outcome)}</small></figcaption></figure>`).join('');
-  const media=gallery || video ? gallery+video : id==='W05' ? 'New tugger design; the earlier fixed-shelf demo no longer matches · 新设计，演示待补' : 'Screenshots in preparation · 截图生成中';
+  const video=clips.map(clip => `<figure><video controls playsinline preload="metadata" src="${e(clip.file)}"></video><figcaption>${e(clip.label)}<small>${e(clip.outcome)}</small>${clip.kind === 'mechanism' ? `<small>${e(clip.robotModel)} · ${e(clip.clock)} · ${e(clip.renderDateUTC)} UTC</small>` : ''}</figcaption></figure>`).join('');
+  const media=gallery || video ? video+gallery : id==='W05' ? 'New tugger design; the earlier fixed-shelf demo no longer matches · 新设计，演示待补' : 'Screenshots in preparation · 截图生成中';
   byId('profile').innerHTML=`<a class="back" href="index.html#catalogue">Task catalogue</a>
     <div class="intro"><div><p class="eyebrow">${e(id)} &nbsp; / &nbsp; ${e(task.scene)}</p><h1>${e(task.title)}</h1><p class="tags">${e(task.dynamic)} &nbsp;·&nbsp; ${e(task.efficiency)}</p></div>
     <div><h2>Instruction</h2><p class="instruction">${e(p.instruction)}</p><p lang="zh-CN">${e(p.zh)}</p></div></div>

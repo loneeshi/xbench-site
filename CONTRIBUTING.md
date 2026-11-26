@@ -15,3 +15,5 @@
 新媒体还要在 .gitignore 中按完整文件名放行。仅提交评审过的截图和视频。W01–W04 的脚本演示已获准公开（2026-11-26），须标明底盘为虚拟平面驱动、时钟未记录，W02 和 W04 标“部分完成”。W05 的旧演示（固定货架）与现设计不符，不公开。禁止提交场景资产、贴图、网格、源记录、个人信息或访问凭据。
 
 首次部署在仓库 Settings → Pages → Source 选择 GitHub Actions。合并到 main 后，Actions 会自动运行 Publish static site。通常几分钟可见，GitHub 提示推送后可能需约 10 分钟。以该次工作流成功和 Pages 返回的网址为准。合并前请检查 Git diff、文件清单、媒体哈希、文件大小及子路径下的页面与媒体。
+
+场景视频批次准备好后，运行 `node scripts/import_mechanism_videos.mjs "<批次目录>"`。脚本按 records.json 核对 public/ 中的 MP4 和哈希，登记文件名并跳过已存在的相同视频。推送前请检查要公开的画面和文字。

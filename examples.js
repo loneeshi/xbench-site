@@ -500,7 +500,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Design estimates: 0.05 m/s counter speed, 1.5 m pickup region, about 30 seconds per opportunity and two minutes per circuit. Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n02-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n02-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N03": {
     "instruction": "Put the rubbish bag from the cart into the kitchen bin.",
@@ -571,7 +580,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Rollback and post-release displacement limits are pending. Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n04-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n04-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N05": {
     "instruction": "Pass the parcel from the cart through the serving hatch and put it down on the counter on the other side.",
@@ -637,7 +655,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n06-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n06-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N07": {
     "instruction": "Take the orange canister off the turntable on the round table without knocking over the other items.",
@@ -658,7 +685,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n07-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n07-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N08": {
     "instruction": "Put the document box from the small table onto the table on the other side of the speed gate, then pull your arms back to this side.",
@@ -679,7 +715,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n08-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n08-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N09": {
     "instruction": "Pull the belt of the barrier post across the walkway and hook its end into the slot on the other post. Both posts must stay standing.",
@@ -705,7 +750,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n09-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n09-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N10": {
     "instruction": "Load the three boxes from the handcart onto the freight trailer.",
@@ -736,7 +790,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Design estimates: 0.2 m/s along a 12 m loading section, about 60 seconds. Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n10-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n10-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N11": {
     "instruction": "Put the three things lying on the kitchen floor into the basket on the counter.",
@@ -767,7 +830,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Design estimates: vacuum speed 0.25 m/s, arrivals at 15, 30 and 45 seconds. Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n11-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n11-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N12": {
     "instruction": "Push the loaded shelf cart outside the door.",
@@ -793,7 +865,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. The shared scorer rejects recorded moving contacts. The scene judge uses the contact role and task phase. Their end-to-end agreement is pending. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Design estimates: 3 m opening, descent at 0.05 m/s, cart heights of 1.8 m and 1.2 m, and a 6 m approach. Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n12-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n12-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N13": {
     "instruction": "Close and latch the lids of two boxes on the conveyor.",
@@ -819,7 +900,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Design estimates: 0.1 m/s belt, 4 m working section, 40 seconds per box and 3 m spacing. Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n13-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n13-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N14": {
     "instruction": "Push the cart with the box on it to the far end of the passage, through both doors. The box must stay on the cart.",
@@ -845,7 +935,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Design estimates: eight seconds open per door, 2.5 m between doors and a 30-second cycle. Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n14-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n14-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N15": {
     "instruction": "Push the handcart on the slope into the parking area.",
@@ -871,7 +970,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Design estimates: 2° slope, 8 m of rolling distance, 15–20 seconds to the line and a 3 m robot approach. Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n15-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n15-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N16": {
     "instruction": "Carry the long board with the freight vehicle to the unloading point and place it on the rack.",
@@ -902,6 +1010,15 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. The scene judge can accept stable final placement even if earlier straight or turn milestones were unrecorded. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Design estimates: 2 m board, 0.2 m/s vehicle and a 6 m straight followed by a right-angle turn and another 3 m. Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/n16-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n16-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   }
 };

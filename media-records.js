@@ -19,6 +19,18 @@ const recordings = {
       "publicSha256": "4cd936903a2fe1bbefd85c7501182a9e8cb101fd03e2c96009c6dc6d93159129",
       "label": "Scripted · two-wheel RB-Y1 A · paused clock",
       "outcome": "Full scripted pass under the legacy two-wheel, paused-clock conditions."
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/o02-mechanism.mp4",
+      "originalSha256": "2ceec6e766b22f0c10c18493add36084960e78a8f2b8b62d7035dfe8b61a82aa",
+      "publicSha256": "a5fa70db8382eee4aae91c7b8aa08c0870cce63912542589b64d3823f0d554f6",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "门扇从约 86° 自动回到关闭位置。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 A v1.2",
+      "clock": "仿真时钟 120 Hz，144 秒仿真按 8 倍速播放，成片 18 秒",
+      "renderDateUTC": "2026-11-26"
     }
   ],
   "K05": [
@@ -136,6 +148,20 @@ const recordings = {
       "publicSha256": "e9d6b533c19346a5e40b424bd87a1212fae75e7be6b1f342048784c10f2ef2cb",
       "label": "Scripted probe · force-limited virtual planar base · clock not recorded",
       "outcome": "Partial: an unassisted two-hand grasp of the moving box passed. The full episode with a box already in hand is not finished."
+    }
+  ],
+  "N01": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n01-mechanism.mp4",
+      "originalSha256": "0836231da08a535fba37ed4e7d3f9a887e0db118cde2d68b1c6e9bbddce4db34",
+      "publicSha256": "17ea3e55486e25e72a23fa20dc1fdaf3e3db96f57bca1aab9566a2afcb72420f",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "冷柜盖从 90°、60° 各释放一次。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "仿真时钟 120 Hz，按原速播放；两次释放各 6 秒",
+      "renderDateUTC": "2026-11-26"
     }
   ]
 };
