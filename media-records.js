@@ -303,5 +303,19 @@ const recordings = {
       "clock": "Sim clock 120 Hz; real time, 16.2 s clip",
       "renderDateUTC": "2026-11-26"
     }
+  ],
+  "O05": [
+    {
+      "kind": "teleop",
+      "scope": "full",
+      "file": "media/o05-teleop-mujoco.mp4",
+      "originalSha256": "8d8c184d4133f8c89200e044e57292fa3897b687ad568980faad329e4513ff96",
+      "publicSha256": "62de133bcc96e619074653c5479f4503e2a3c05b93da4c73a90e3b49ec2978d1",
+      "label": "Human teleoperation · MuJoCo prototype · RB-Y1 M v1.3",
+      "outcome": "A person teleoperates the robot through the task in the simplified MuJoCo prototype (head camera and top view). Not the Isaac scene; not a model run.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Real time, 4 min 39 s",
+      "renderDateUTC": "2026-11-26"
+    }
   ]
 };
