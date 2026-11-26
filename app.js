@@ -1,6 +1,17 @@
 'use strict';
 const byId = id => document.getElementById(id);
 const escapeText = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function demoStatus(clips, hasImages) {
+  const labels = {teleop: 'Human teleop demo · 人类遥操作', scripted: 'Scripted demo · 脚本演示', mechanism: 'Scene video · 场景视频'};
+  for (const kind of ['teleop', 'scripted', 'mechanism']) {
+    const matches = clips.filter(clip => clip.kind === kind);
+    if (!matches.length) continue;
+    const scope = ['full', 'partial', 'old-design'].find(value => matches.some(clip => clip.scope === value));
+    const qualifier = scope === 'partial' ? 'partial · 部分完成' : scope === 'old-design' ? 'old design · 旧设计' : '';
+    return {kind, label: labels[kind], qualifier};
+  }
+  return hasImages ? {kind: 'images', label: 'Screenshots · 只有截图'} : {kind: 'pending', label: 'Pending · 待定'};
+}
 function catalogueView() {
   const filters = ['scene', 'dynamic', 'efficiency'];
   function refresh() {
@@ -8,7 +19,9 @@ function catalogueView() {
     byId('count').textContent = tasks.length + ' of ' + catalogue.length;
     byId('rows').innerHTML = tasks.map(t => {
       const profile = examples[t.id] ? '<a href="task.html?id='+t.id+'">Open profile</a>' : 'Pending';
-      return '<tr>'+[t.id,t.title,t.scene,t.dynamic,t.efficiency].map(v=>'<td>'+escapeText(v)+'</td>').join('')+'<td>'+profile+'</td></tr>';
+      const status = demoStatus(recordings[t.id] || [], examples[t.id]?.images.length);
+      const badge = '<span class="demo-badge '+status.kind+'">'+status.label+(status.qualifier ? '<small>'+status.qualifier+'</small>' : '')+'</span>';
+      return '<tr>'+[t.id,t.title,t.scene,t.dynamic,t.efficiency].map(v=>'<td>'+escapeText(v)+'</td>').join('')+'<td><div class="profile-actions">'+badge+profile+'</div></td></tr>';
     }).join('') || '<tr><td colspan="6">No tasks match these filters.</td></tr>';
   }
   for (const key of filters) {
