@@ -163,5 +163,47 @@ const recordings = {
       "clock": "仿真时钟 120 Hz，按原速播放；两次释放各 6 秒",
       "renderDateUTC": "2026-11-26"
     }
+  ],
+  "N02": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n02-mechanism.mp4",
+      "originalSha256": "33b9e73d0a975bd8df6d1e99f55324192655e6d0cb35a8d2b10fdd2b3f549571",
+      "publicSha256": "835d2eaaf7432faf998c9e99df709be9ec3b1816b36ef20c4651239a06199eb6",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "回转餐台载着 5 盘带盖的菜一直转动。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "仿真时钟 120 Hz，前 36 秒仿真按 1.5 倍速播放，成片 24 秒",
+      "renderDateUTC": "2026-11-26"
+    }
+  ],
+  "N03": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n03-mechanism.mp4",
+      "originalSha256": "2019adaed4cf31313683c4b4299d0ac1ed27eca5125c3536d2d6facda2cd6fb1",
+      "publicSha256": "652b6c5d6fd83893984bccbe8829b23f74110e7de4a08c7627ac763ad53a7cd2",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "垃圾桶盖从 75°、60° 各放手一次，自动落下盖上。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "仿真时钟 120 Hz，按原速播放；两次放手各 5 秒",
+      "renderDateUTC": "2026-11-26"
+    }
+  ],
+  "N05": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n05-mechanism.mp4",
+      "originalSha256": "9a0279a3d0950e61cfce4f1e662415e1574e6833d9968177af69191f19f9fe19",
+      "publicSha256": "6113c7fe604ca3255a8ed7632095a0aaa04aad4600fa1182fd1983c0e4c2bd47",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "卷帘从 0.55 m、0.30 m 各放手一次，自动落下关上。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "仿真时钟 120 Hz，按原速播放；两次放手各 5 秒",
+      "renderDateUTC": "2026-11-26"
+    }
   ]
 };
