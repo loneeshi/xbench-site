@@ -7,7 +7,7 @@ function catalogueView() {
     const tasks = catalogue.filter(t => filters.every(key => !byId(key).value || t[key] === byId(key).value));
     byId('count').textContent = tasks.length + ' of ' + catalogue.length;
     byId('rows').innerHTML = tasks.map(t => {
-      const profile = examples[t.id] ? '<a href="task.html?id='+t.id+'">Open profile</a>' : t.id.startsWith('W') ? 'Visuals pending clearance · 画面待确认' : 'Pending';
+      const profile = examples[t.id] ? '<a href="task.html?id='+t.id+'">Open profile</a>' : 'Pending';
       return '<tr>'+[t.id,t.title,t.scene,t.dynamic,t.efficiency].map(v=>'<td>'+escapeText(v)+'</td>').join('')+'<td>'+profile+'</td></tr>';
     }).join('') || '<tr><td colspan="6">No tasks match these filters.</td></tr>';
   }
@@ -29,7 +29,7 @@ function profileView() {
   document.title=id+' · '+task.title+' · XBench';
   const gallery=p.images.map(img=>`<figure><img src="${e(img.src)}" alt="${e(id+' · '+img.view)}"><figcaption>${e(img.view)} · RB-Y1 M v1.3</figcaption></figure>`).join('');
   const video=clips.map(clip => `<figure><video controls playsinline preload="metadata" src="${e(clip.file)}"></video><figcaption>${e(clip.label)}<small>${e(clip.outcome)}</small></figcaption></figure>`).join('');
-  const media=id.startsWith('W') ? 'Visuals pending clearance · 画面待确认' : gallery || video ? gallery+video : 'Screenshots in preparation · 截图生成中';
+  const media=gallery || video ? gallery+video : id==='W05' ? 'New tugger design; the earlier fixed-shelf demo no longer matches · 新设计，演示待补' : 'Screenshots in preparation · 截图生成中';
   byId('profile').innerHTML=`<a class="back" href="index.html#catalogue">Task catalogue</a>
     <div class="intro"><div><p class="eyebrow">${e(id)} &nbsp; / &nbsp; ${e(task.scene)}</p><h1>${e(task.title)}</h1><p class="tags">${e(task.dynamic)} &nbsp;·&nbsp; ${e(task.efficiency)}</p></div>
     <div><h2>Instruction</h2><p class="instruction">${e(p.instruction)}</p><p lang="zh-CN">${e(p.zh)}</p></div></div>
