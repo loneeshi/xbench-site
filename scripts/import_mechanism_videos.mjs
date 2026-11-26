@@ -54,14 +54,15 @@ for (const {name} of publicFiles) {
   if (!size || size !== row.publicBytes || size > limit || row.width !== 1280 || row.height !== 720 ||
       row.codec !== 'H.264' || !/^[0-9a-f]{64}$/.test(row.originalSha256) ||
       hash(fs.readFileSync(source)) !== row.publicSha256) throw new Error('Media verification failed: ' + name);
-  for (const key of ['label','outcome','robotModel','clock','renderDateUTC']) {
+  for (const key of ['outcomeEn','robotModel','clockEn','renderDateUTC']) {
+    if (/[　-〿一-鿿＀-￯]/.test(String(row[key] ?? ''))) throw new Error('Non-English text in ' + key + ' for ' + name);
     if (typeof row[key] !== 'string' || !row[key].trim()) throw new Error('Missing ' + key + ' for ' + name);
   }
   const scope = row.scope ?? 'full'; // Describes the mechanism clip, not task completion.
   if (!['full','partial','old-design'].includes(scope)) throw new Error('Unexpected scope: ' + name);
   const record = {kind:'mechanism', scope, file:row.file, originalSha256:row.originalSha256, publicSha256:row.publicSha256,
-    label:'Mechanism demo · robot stays still · not a solution · ' + row.label, outcome:row.outcome,
-    robotModel:row.robotModel, clock:row.clock, renderDateUTC:row.renderDateUTC};
+    label:'Mechanism demo · robot stays still · not a solution', outcome:row.outcomeEn,
+    robotModel:row.robotModel, clock:row.clockEn, renderDateUTC:row.renderDateUTC};
   const clips = records[row.taskId] ??= [];
   const index = clips.findIndex(clip => clip.file === row.file);
   if (index < 0) clips.push(record);

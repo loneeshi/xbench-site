@@ -26,10 +26,10 @@ const recordings = {
       "file": "media/o02-mechanism.mp4",
       "originalSha256": "2ceec6e766b22f0c10c18493add36084960e78a8f2b8b62d7035dfe8b61a82aa",
       "publicSha256": "a5fa70db8382eee4aae91c7b8aa08c0870cce63912542589b64d3823f0d554f6",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "门扇从约 86° 自动回到关闭位置。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The door leaf swings back from about 86° to closed by itself. The robot stays at its start pose.",
       "robotModel": "RB-Y1 A v1.2",
-      "clock": "仿真时钟 120 Hz，144 秒仿真按 8 倍速播放，成片 18 秒",
+      "clock": "Sim clock 120 Hz; 144 s of simulation at 8x, 18 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -157,10 +157,10 @@ const recordings = {
       "file": "media/n01-mechanism.mp4",
       "originalSha256": "1953b253e81a1e3b523b8e668fee0e782e3c6997bb5485560019fb210103e29a",
       "publicSha256": "b5ceca380a6eac010e3d5b5d7b32dc830657843b36ba68496ad312203e93b171",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "冷柜盖从 90°、60° 各放手一次，自动落下关上。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The chest-freezer lid is released once from 90° and once from 60°; it falls shut by itself. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "仿真时钟 120 Hz，按原速播放；两次放手各 6 秒",
+      "clock": "Sim clock 120 Hz; real time, 6 s per release",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -171,10 +171,10 @@ const recordings = {
       "file": "media/n02-mechanism.mp4",
       "originalSha256": "33b9e73d0a975bd8df6d1e99f55324192655e6d0cb35a8d2b10fdd2b3f549571",
       "publicSha256": "835d2eaaf7432faf998c9e99df709be9ec3b1816b36ef20c4651239a06199eb6",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "回转餐台载着 5 盘带盖的菜一直转动。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The conveyor-ring counter keeps turning with five covered dishes on it. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "仿真时钟 120 Hz，前 36 秒仿真按 1.5 倍速播放，成片 24 秒",
+      "clock": "Sim clock 120 Hz; first 36 s of simulation at 1.5x, 24 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -185,10 +185,10 @@ const recordings = {
       "file": "media/n03-mechanism.mp4",
       "originalSha256": "2019adaed4cf31313683c4b4299d0ac1ed27eca5125c3536d2d6facda2cd6fb1",
       "publicSha256": "652b6c5d6fd83893984bccbe8829b23f74110e7de4a08c7627ac763ad53a7cd2",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "垃圾桶盖从 75°、60° 各放手一次，自动落下盖上。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The bin lid is released once from 75° and once from 60°; it falls shut by itself. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "仿真时钟 120 Hz，按原速播放；两次放手各 5 秒",
+      "clock": "Sim clock 120 Hz; real time, 5 s per release",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -199,10 +199,10 @@ const recordings = {
       "file": "media/n05-mechanism.mp4",
       "originalSha256": "9a0279a3d0950e61cfce4f1e662415e1574e6833d9968177af69191f19f9fe19",
       "publicSha256": "6113c7fe604ca3255a8ed7632095a0aaa04aad4600fa1182fd1983c0e4c2bd47",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "卷帘从 0.55 m、0.30 m 各放手一次，自动落下关上。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The hatch shutter is released once from 0.55 m and once from 0.30 m; it falls shut by itself. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "仿真时钟 120 Hz，按原速播放；两次放手各 5 秒",
+      "clock": "Sim clock 120 Hz; real time, 5 s per release",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -213,10 +213,10 @@ const recordings = {
       "file": "media/w05-mechanism.mp4",
       "originalSha256": "a56ef8c4805bcd6b121aef6cc9ed11c4a4059b61e23d8d893cabf2487c566168",
       "publicSha256": "8d5aec27121b3811e288f2ad0cd451c8313f7a5ef60b240e3419061de253d4ab",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "牵引车沿环线跑一圈：停站 30 秒后出发，约 92 秒回到停靠点。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The tugger runs one loop: it waits 30 s at the stop, leaves, and is back at the stop after about 92 s. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "仿真时钟 120 Hz，一圈 92 秒仿真按 8 倍速播放，成片 11.5 秒",
+      "clock": "Sim clock 120 Hz; one 92 s loop at 8x, 11.5 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -227,10 +227,10 @@ const recordings = {
       "file": "media/n06-mechanism.mp4",
       "originalSha256": "e1d034749bfb279506939577a51b1be73f7d3de6e1ea5da9e593a352422dc2cc",
       "publicSha256": "0acfd5eb381d067d3a41a7dfa1658ebe0fa4bdcb82bc2532f1c05691c1d33049",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "三扇门叶按 6°/s 匀速转动（一分钟一圈），20 秒里转过约 120°。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The three door wings turn steadily at 6°/s (one turn per minute), about 120° in 20 s. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "仿真时钟 120 Hz，按原速播放；20 秒仿真，成片 20 秒",
+      "clock": "Sim clock 120 Hz; real time, 20 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -241,10 +241,10 @@ const recordings = {
       "file": "media/n08-mechanism.mp4",
       "originalSha256": "f35bfbae8c61de2ea0e54eb2badc479defedc05d56cb98852fc73b16daf30136",
       "publicSha256": "94dbba238d7c1fca1457fe9d6190a00c447e6b5c82ffcfc14dfe51d105a2c476",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "闸机门从全开到关上，关 6 秒后再打开，全开 20 秒后再关上，走完一个完整周期；信号灯随之在绿箭头和红叉之间切换。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The gate goes through one full cycle: open, closed for 6 s, open for 20 s, closed again; the signal switches between a green arrow and a red cross. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "仿真时钟 120 Hz，40 秒仿真按 2 倍速播放，成片 20 秒",
+      "clock": "Sim clock 120 Hz; 40 s of simulation at 2x, 20 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -255,10 +255,10 @@ const recordings = {
       "file": "media/k04-mechanism.mp4",
       "originalSha256": "60b18bfd46e22af8954d5188f1d52a15f5e0ec900a53a4db0a2390a4c07a56a4",
       "publicSha256": "cd322a0ae1d68bf4f036626ad1f338b1d5077dcbe853b861ffbf0ca4c9e41bf5",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "上翻柜门从 90°、100° 各放手一次，约 1.3–1.4 秒自己落下关上。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The lift-up cabinet door is released once from 90° and once from 100°; it falls shut by itself in about 1.3–1.4 s. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "物理时钟 120 Hz，原速播放，两次放手各 6 秒，成片 12 秒",
+      "clock": "Sim clock 120 Hz; real time, 6 s per release, 12 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -269,10 +269,10 @@ const recordings = {
       "file": "media/n10-mechanism.mp4",
       "originalSha256": "833759be2815107e7b60cb1edc2b4b21f3688e9d4ba6413d15535cf92dfbde11",
       "publicSha256": "6cd3223bb08976f5584be38780fb24dbf68610a4667ba0350fafe9ed9538fff7",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "运货拖车以 0.2 m/s 直行穿过 12 m 装货区，第 60 秒离开装货区后继续前进。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The freight trailer drives straight through the 12 m loading zone at 0.2 m/s, leaves it at 60 s and keeps going. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "物理时钟 120 Hz，61 秒仿真按 3 倍速播放，成片 20.3 秒",
+      "clock": "Sim clock 120 Hz; 61 s of simulation at 3x, 20.3 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -283,10 +283,10 @@ const recordings = {
       "file": "media/n12-mechanism.mp4",
       "originalSha256": "7a07bbd2a4e316fc9497a2647588ed865d5df54a6abc3d16ae353bac5c491c2f",
       "publicSha256": "a67db0eaa68099afcc7a548a9491866f04e0f47fedd94c052cda0841418deea4",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "卷帘门底梁从 3 m 以 0.15 m/s 下降，20 秒落地后保持关闭。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The roller door bottom bar descends from 3 m at 0.15 m/s, reaches the floor after 20 s and stays closed. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "物理时钟 120 Hz，原速播放，成片 21 秒",
+      "clock": "Sim clock 120 Hz; real time, 21 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -297,10 +297,10 @@ const recordings = {
       "file": "media/n15-mechanism.mp4",
       "originalSha256": "05c74a34a652eaff9ab2e0c1f1b4ecdf7edaa25126ae749192a632e513129970",
       "publicSha256": "a3e00dda2237d909c826c360977a4c307447aadc58020a8797e34035adc7c0cb",
-      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "手推车载着货箱顺 1.5% 缓坡自己滚下，16.2 秒车头越过停止线，货箱仍在车上。机器人保持起点姿态。",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The loaded handcart rolls down the 1.5% slope by itself; its front crosses the stop line at 16.2 s and the box stays on the cart. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "物理时钟 120 Hz，原速播放，成片 16.2 秒",
+      "clock": "Sim clock 120 Hz; real time, 16.2 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ]
