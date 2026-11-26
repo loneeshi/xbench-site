@@ -317,5 +317,75 @@ const recordings = {
       "clock": "Real time, 4 min 39 s",
       "renderDateUTC": "2026-11-26"
     }
+  ],
+  "N07": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n07-mechanism.mp4",
+      "originalSha256": "895d60b42ce31605f44504666eb6eaf9baf4b85d4a9763b7b2d07a12a86c5022",
+      "publicSha256": "ec3fc8a85477802c7c7e576469eeedce0e31a4414b3a75d0792e1c5b3603ffe2",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The turntable turns steadily at 6°/s and the three jars ride one full turn. The robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Sim clock 120 Hz; 60 s at 2.5x, 24 s clip",
+      "renderDateUTC": "2026-11-26"
+    }
+  ],
+  "N09": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n09-mechanism.mp4",
+      "originalSha256": "5cb96d6e2c628bcb45cb49599a7e9888b862fd8308ea74c3c50a1c0c091dd6ae",
+      "publicSha256": "31d1ee6be4558987f305cd680f3bcbbf0ecc8b5c5490135f84c59e86110cd6fa",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The belt barrier head is pulled out and released and retracts by itself; hooked into the far post it stays latched, and lifted it unhooks and retracts. The robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Sim clock 120 Hz; 60 s at 3x, 20 s clip",
+      "renderDateUTC": "2026-11-26"
+    }
+  ],
+  "N13": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n13-mechanism.mp4",
+      "originalSha256": "c66f4a8d0f7bbe412dec79d728820c215a59c4400342963f6c2d6b1135a0efd6",
+      "publicSha256": "059c3505963deee747b23b3c7313432454080db89b2cd8fa066d59a6db42c4af",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The conveyor carries two flap-lid boxes; the self-check closes the first lid with joint forces, slides the latch shut, then releases and reopens it. The robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Sim clock 120 Hz; 8.2 s at 0.5x, 16 s clip",
+      "renderDateUTC": "2026-11-26"
+    }
+  ],
+  "N14": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n14-mechanism.mp4",
+      "originalSha256": "dde2929f8330db2b5e4b93e501e89df12e18da8fb4aed83ef60c615d53c18202",
+      "publicSha256": "29e8ab66f8852e180b9ef7d0b3f71fe1b07383967b51cff25f8d8a7c60b04821",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The two interlocked automatic doors open and close in turn, never both at once; the lamps switch red and green. The robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Sim clock 120 Hz; 40 s at 1.9x, 21 s clip",
+      "renderDateUTC": "2026-11-26"
+    }
+  ],
+  "N16": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n16-mechanism.mp4",
+      "originalSha256": "0281594f5240ecd198a23f94144e2f41b06a667d149a4b79fc1963a46da5e028",
+      "publicSha256": "615d4d490001053e075f7348c1dee6d1e5505125a45c04d389b39a9a38a176be",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The tug pulls the trailer along its route (straight, turn, stop); with nobody holding the other end, the long board then slides off its cradle. The robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Sim clock 120 Hz; 64 s route at 4x, 16 s clip",
+      "renderDateUTC": "2026-11-26"
+    }
   ]
 };
