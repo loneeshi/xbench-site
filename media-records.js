@@ -247,5 +247,61 @@ const recordings = {
       "clock": "仿真时钟 120 Hz，40 秒仿真按 2 倍速播放，成片 20 秒",
       "renderDateUTC": "2026-11-26"
     }
+  ],
+  "K04": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/k04-mechanism.mp4",
+      "originalSha256": "60b18bfd46e22af8954d5188f1d52a15f5e0ec900a53a4db0a2390a4c07a56a4",
+      "publicSha256": "cd322a0ae1d68bf4f036626ad1f338b1d5077dcbe853b861ffbf0ca4c9e41bf5",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "上翻柜门从 90°、100° 各放手一次，约 1.3–1.4 秒自己落下关上。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "物理时钟 120 Hz，原速播放，两次放手各 6 秒，成片 12 秒",
+      "renderDateUTC": "2026-11-26"
+    }
+  ],
+  "N10": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n10-mechanism.mp4",
+      "originalSha256": "833759be2815107e7b60cb1edc2b4b21f3688e9d4ba6413d15535cf92dfbde11",
+      "publicSha256": "6cd3223bb08976f5584be38780fb24dbf68610a4667ba0350fafe9ed9538fff7",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "运货拖车以 0.2 m/s 直行穿过 12 m 装货区，第 60 秒离开装货区后继续前进。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "物理时钟 120 Hz，61 秒仿真按 3 倍速播放，成片 20.3 秒",
+      "renderDateUTC": "2026-11-26"
+    }
+  ],
+  "N12": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n12-mechanism.mp4",
+      "originalSha256": "7a07bbd2a4e316fc9497a2647588ed865d5df54a6abc3d16ae353bac5c491c2f",
+      "publicSha256": "a67db0eaa68099afcc7a548a9491866f04e0f47fedd94c052cda0841418deea4",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "卷帘门底梁从 3 m 以 0.15 m/s 下降，20 秒落地后保持关闭。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "物理时钟 120 Hz，原速播放，成片 21 秒",
+      "renderDateUTC": "2026-11-26"
+    }
+  ],
+  "N15": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n15-mechanism.mp4",
+      "originalSha256": "05c74a34a652eaff9ab2e0c1f1b4ecdf7edaa25126ae749192a632e513129970",
+      "publicSha256": "a3e00dda2237d909c826c360977a4c307447aadc58020a8797e34035adc7c0cb",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "手推车载着货箱顺 1.5% 缓坡自己滚下，16.2 秒车头越过停止线，货箱仍在车上。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "物理时钟 120 Hz，原速播放，成片 16.2 秒",
+      "renderDateUTC": "2026-11-26"
+    }
   ]
 };
