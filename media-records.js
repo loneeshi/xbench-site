@@ -36,12 +36,12 @@ const recordings = {
   "K05": [
     {
       "kind": "scripted",
-      "scope": "old-design",
-      "file": "media/k05-old-flow.mp4",
-      "originalSha256": "e096f91ca1af1dcc525fda7410dac3bb8ea7a2b860446821ab4c5c692f73a417",
-      "publicSha256": "a49205a4b8f6fa62357f07896dbe6e252bd05273b4a17da12bb0ad2c2b54b81b",
+      "scope": "full",
+      "file": "media/k05-scripted.mp4",
+      "originalSha256": "cff3e11281b77f63da40277f0a30dcab8b52b69f62e26bef4fb2518f8f89b21e",
+      "publicSha256": "8ba076970618a7bf111ba01a515689a9aed945fcba921c1365e72a4e46dd2121",
       "label": "Scripted · two-wheel RB-Y1 A · paused clock",
-      "outcome": "Old A06 procedure. The current extinguisher task has no verified full pass."
+      "outcome": "Full scripted pass of the current design (run kb-a06b-full-16): push the cart out of the path, take the extinguisher off its rack, return to the marked area before the fire limit. Three views at 4x speed."
     }
   ],
   "K02": [
