@@ -4,4 +4,4 @@ XBench studies how mobile manipulators act in time as their surroundings change.
 
 Open `index.html` directly to browse offline. All pages use relative links. The publishing workflow deploys the static files from `main` to GitHub Pages.
 
-See [贡献指南](CONTRIBUTING.md) for editing and media instructions.
+See [the contributing guide](CONTRIBUTING.md) for editing and media instructions.
