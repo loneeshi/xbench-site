@@ -155,12 +155,12 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/n01-mechanism.mp4",
-      "originalSha256": "0836231da08a535fba37ed4e7d3f9a887e0db118cde2d68b1c6e9bbddce4db34",
-      "publicSha256": "17ea3e55486e25e72a23fa20dc1fdaf3e3db96f57bca1aab9566a2afcb72420f",
+      "originalSha256": "1953b253e81a1e3b523b8e668fee0e782e3c6997bb5485560019fb210103e29a",
+      "publicSha256": "b5ceca380a6eac010e3d5b5d7b32dc830657843b36ba68496ad312203e93b171",
       "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
-      "outcome": "冷柜盖从 90°、60° 各释放一次。机器人保持起点姿态。",
+      "outcome": "冷柜盖从 90°、60° 各放手一次，自动落下关上。机器人保持起点姿态。",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "仿真时钟 120 Hz，按原速播放；两次释放各 6 秒",
+      "clock": "仿真时钟 120 Hz，按原速播放；两次放手各 6 秒",
       "renderDateUTC": "2026-11-26"
     }
   ],
