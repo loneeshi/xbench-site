@@ -219,5 +219,33 @@ const recordings = {
       "clock": "仿真时钟 120 Hz，一圈 92 秒仿真按 8 倍速播放，成片 11.5 秒",
       "renderDateUTC": "2026-11-26"
     }
+  ],
+  "N06": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n06-mechanism.mp4",
+      "originalSha256": "e1d034749bfb279506939577a51b1be73f7d3de6e1ea5da9e593a352422dc2cc",
+      "publicSha256": "0acfd5eb381d067d3a41a7dfa1658ebe0fa4bdcb82bc2532f1c05691c1d33049",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "三扇门叶按 6°/s 匀速转动（一分钟一圈），20 秒里转过约 120°。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "仿真时钟 120 Hz，按原速播放；20 秒仿真，成片 20 秒",
+      "renderDateUTC": "2026-11-26"
+    }
+  ],
+  "N08": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n08-mechanism.mp4",
+      "originalSha256": "f35bfbae8c61de2ea0e54eb2badc479defedc05d56cb98852fc73b16daf30136",
+      "publicSha256": "94dbba238d7c1fca1457fe9d6190a00c447e6b5c82ffcfc14dfe51d105a2c476",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "闸机门从全开到关上，关 6 秒后再打开，全开 20 秒后再关上，走完一个完整周期；信号灯随之在绿箭头和红叉之间切换。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "仿真时钟 120 Hz，40 秒仿真按 2 倍速播放，成片 20 秒",
+      "renderDateUTC": "2026-11-26"
+    }
   ]
 };
