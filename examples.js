@@ -429,7 +429,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. The current scene uses a looping tugger. Earlier recordings cover a fixed shelf. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Stop duration and lap period are pending. Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/w05-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/w05-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "N01": {
     "instruction": "Take the blue food container out of the chest freezer and put it on the counter next to the freezer.",

@@ -205,5 +205,19 @@ const recordings = {
       "clock": "仿真时钟 120 Hz，按原速播放；两次放手各 5 秒",
       "renderDateUTC": "2026-11-26"
     }
+  ],
+  "W05": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/w05-mechanism.mp4",
+      "originalSha256": "a56ef8c4805bcd6b121aef6cc9ed11c4a4059b61e23d8d893cabf2487c566168",
+      "publicSha256": "8d5aec27121b3811e288f2ad0cd451c8313f7a5ef60b240e3419061de253d4ab",
+      "label": "Mechanism demo · robot stays still · not a solution · 机关自动演示，机器人不动，不是解题过程",
+      "outcome": "牵引车沿环线跑一圈：停站 30 秒后出发，约 92 秒回到停靠点。机器人保持起点姿态。",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "仿真时钟 120 Hz，一圈 92 秒仿真按 8 倍速播放，成片 11.5 秒",
+      "renderDateUTC": "2026-11-26"
+    }
   ]
 };
