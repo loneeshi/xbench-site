@@ -25,10 +25,10 @@ function profileView() {
     byId('profile').innerHTML = '<h1>Profile pending</h1><a href="index.html#catalogue">Return to the catalogue</a>';
     return;
   }
-  const e=escapeText, clip=recordings[id];
+  const e=escapeText, clips=recordings[id] || [];
   document.title=id+' · '+task.title+' · XBench';
   const gallery=p.images.map(img=>`<figure><img src="${e(img.src)}" alt="${e(id+' · '+img.view)}"><figcaption>${e(img.view)} · RB-Y1 M v1.3</figcaption></figure>`).join('');
-  const video=clip ? `<figure><video controls playsinline preload="metadata" src="${e(clip.file)}"></video><figcaption>${e(clip.label)}<small>${e(clip.outcome)}</small></figcaption></figure>` : '';
+  const video=clips.map(clip => `<figure><video controls playsinline preload="metadata" src="${e(clip.file)}"></video><figcaption>${e(clip.label)}<small>${e(clip.outcome)}</small></figcaption></figure>`).join('');
   const media=id.startsWith('W') ? 'Visuals pending clearance · 画面待确认' : gallery || video ? gallery+video : 'Screenshots in preparation · 截图生成中';
   byId('profile').innerHTML=`<a class="back" href="index.html#catalogue">Task catalogue</a>
     <div class="intro"><div><p class="eyebrow">${e(id)} &nbsp; / &nbsp; ${e(task.scene)}</p><h1>${e(task.title)}</h1><p class="tags">${e(task.dynamic)} &nbsp;·&nbsp; ${e(task.efficiency)}</p></div>
