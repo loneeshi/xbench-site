@@ -24,13 +24,13 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/o02-mechanism.mp4",
-      "originalSha256": "1d0dddc49a80f94ffbf2067bd694d30e88fc43f6ee12c8f2c2452551d447bb5b",
-      "publicSha256": "413b66ceb98aaa855c69f23cd07496ce1ab46f69ccdf1085367fb2ddd18d3b1a",
+      "originalSha256": "419cfa6f96745ec1d41bf935b8e948a845dd01a41a9d33ea819667c44a30c8a1",
+      "publicSha256": "8ac239f9f09baa5297b6ccfb38d9c456895058b4730a8bf1f28e000c19e84ef2",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The door leaf is released at about 86 deg, swings slowly back to 60 deg over about 120 s (delayed-action closer) and then closes by itself. The robot stays at its start pose.",
+      "outcome": "The cart is now a service cart with a 0.635 m deck. The door leaf is released at about 86 deg, swings slowly back to 60 deg over about 120 s (delayed-action closer) and then closes by itself. The robot and the cart stay still.",
       "robotModel": "RB-Y1 M v1.3",
       "clock": "Simulation clock 120 Hz; 144 s shown at 8x; clip 18 s",
-      "renderDateUTC": "2026-11-26"
+      "renderDateUTC": "2026-11-27"
     }
   ],
   "K05": [
@@ -134,13 +134,13 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/o04-mechanism.mp4",
-      "originalSha256": "e4c19cbe74b1dd3506331eb8f18e5ecf79ee9ec1ee8a1da51dff4ce7aa60f03d",
-      "publicSha256": "5e558118c7445bf9c12dac5892ae65a52e2fc4722d868e590d7b0581da7d0693",
+      "originalSha256": "41a84acfa5dd7a5f807fafe2092ceb46e68ccf9adb5032437a210b14505b7051",
+      "publicSha256": "53bbd80542115f9e485c6b33958f098d8831f0174a9521c854dd873d63936ae5",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The fire doors are held open at 90 deg. After the alarm the red strobe lights, both leaves close to 10 deg within 60 s and are shut and locked at 67 s. The robot stays at its start pose.",
+      "outcome": "The cart is now a service cart with a 0.635 m deck, and the unload area is a folding table against the wall (top 0.737 m). The fire doors are held open at 90 deg. After the alarm the red strobe lights, both leaves close to 10 deg within 60 s and are shut and locked at 67 s. The robot stays at its start pose; the cart and totes stay still.",
       "robotModel": "RB-Y1 M v1.3",
       "clock": "Simulation clock 120 Hz; 88 s shown at 6x; clip 15 s",
-      "renderDateUTC": "2026-11-26"
+      "renderDateUTC": "2026-11-27"
     }
   ],
   "O03": [
@@ -329,12 +329,12 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/n05-mechanism.mp4",
-      "originalSha256": "9a0279a3d0950e61cfce4f1e662415e1574e6833d9968177af69191f19f9fe19",
-      "publicSha256": "6113c7fe604ca3255a8ed7632095a0aaa04aad4600fa1182fd1983c0e4c2bd47",
+      "originalSha256": "ab1779312d158915f2e72fdfcec5f0e9b04e6b9ad5752d45740d83b8e83212db",
+      "publicSha256": "429b8fb541d870da0c1db7b2789be08232926849eb0015a688846554c3d7c2c0",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The hatch shutter is released once from 0.55 m and once from 0.30 m; it falls shut by itself. The robot stays at its start pose.",
+      "outcome": "Motorised shutter: one press of the wall button raises it to fully open in about 4 s; it stays open 10 s and lowers by itself; a press while it is coming down sends it back up, and it finally closes. The status light is green while the shutter is not fully closed and red when closed. A lidded saucepan stands on the cart. The robot keeps its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Sim clock 120 Hz; real time, 5 s per release",
+      "clock": "Physics at 120 Hz; 36 s self-check played at 1.5x, 24 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -371,12 +371,12 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/n08-mechanism.mp4",
-      "originalSha256": "f35bfbae8c61de2ea0e54eb2badc479defedc05d56cb98852fc73b16daf30136",
-      "publicSha256": "94dbba238d7c1fca1457fe9d6190a00c447e6b5c82ffcfc14dfe51d105a2c476",
+      "originalSha256": "d495970c19ab071461d0c97b06c88437a60f50d9799f557d0a5c93366e446f38",
+      "publicSha256": "56f58054402c494611a1467b299693ec6db0c38f65f172d60376ba93977f9783",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The gate goes through one full cycle: open, closed for 6 s, open for 20 s, closed again; the signal switches between a green arrow and a red cross. The robot stays at its start pose.",
+      "outcome": "The gate wings close from fully open, stay closed 6 s, open, stay open 20 s and close again in a loop; the signal switches between a green arrow and a red cross. A desk organiser with a grip bar stands on the small table; the side table is east of the gate. The robot keeps its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Sim clock 120 Hz; 40 s of simulation at 2x, 20 s clip",
+      "clock": "Physics at 120 Hz; 40 s self-check played at 2x, about 21 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -495,12 +495,12 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/n13-mechanism.mp4",
-      "originalSha256": "c66f4a8d0f7bbe412dec79d728820c215a59c4400342963f6c2d6b1135a0efd6",
-      "publicSha256": "059c3505963deee747b23b3c7313432454080db89b2cd8fa066d59a6db42c4af",
+      "originalSha256": "c35ea06a4afc4241c548ef7b10a058af147b29c072c3e140e806d45d131c198b",
+      "publicSha256": "a1bb79bf6ee4b3c0d8131d21112d1b909f774cbbe351d3001efde5bb89798fd1",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The conveyor carries two flap-lid boxes; the self-check closes the first lid with joint forces, slides the latch shut, then releases and reopens it. The robot stays at its start pose.",
+      "outcome": "A tote rides the conveyor. Its red, yellow and blue buttons are pressed by the self-check's own spring drives, not by the robot: first in a wrong order (red, yellow, red), and the lock lamp stays red; then in the order shown on the display (yellow, blue, red), and the lamp turns green. The robot keeps its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Sim clock 120 Hz; 8.2 s at 0.5x, 16 s clip",
+      "clock": "Physics at 120 Hz; about 4.5 s self-check played at 0.375x, 12 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -523,12 +523,12 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/n16-mechanism.mp4",
-      "originalSha256": "0281594f5240ecd198a23f94144e2f41b06a667d149a4b79fc1963a46da5e028",
-      "publicSha256": "615d4d490001053e075f7348c1dee6d1e5505125a45c04d389b39a9a38a176be",
+      "originalSha256": "618b2b2f56b670f81aca68e28e5b55beff53789225f10fc6ba4948d19c7c9b82",
+      "publicSha256": "f79ad6945e1487d350e44ff96204c5a2d83337351918ca7353bb5a39ae524051",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The tug pulls the trailer along its route (straight, turn, stop); with nobody holding the other end, the long board then slides off its cradle. The robot stays at its start pose.",
+      "outcome": "The freight cart with a lift saddle on its side drives straight, turns left, drives straight and stops; the saddle then lowers 10 cm. The robot keeps its start pose and nobody holds the other end, so the board is dragged off its pallets and falls: a physical result, not a task demonstration.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Sim clock 120 Hz; 64 s route at 4x, 16 s clip",
+      "clock": "Physics at 120 Hz; about 98 s route played at 6x, about 16 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
