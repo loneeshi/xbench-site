@@ -425,5 +425,19 @@ const recordings = {
       "clock": "Physics clock 120 Hz; real time, 5 s per release, 10 s clip",
       "renderDateUTC": "2026-11-26"
     }
+  ],
+  "N11": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n11-mechanism.mp4",
+      "originalSha256": "f44b2f04038ed28b11bab640930b760b611f2a7e1447e0b50e21a0993cee882f",
+      "publicSha256": "cf743e6613c65f7432f4d799f20ec85b4087a220699eb5f313d77211411b9efd",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The robot vacuum follows its fixed back-and-forth path and reaches the slipper, the cable and the paddle in turn. The robot stays at its start pose. Interim clip: in this run the vacuum moves at half the designed speed (a timing bug, being fixed), so the reach times are about 30, 60 and 90 s instead of 15, 30 and 45 s.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Each physics step is 1/60 s; about 100 s of simulation at 8x, 12.5 s clip",
+      "renderDateUTC": "2026-11-26"
+    }
   ]
 };
