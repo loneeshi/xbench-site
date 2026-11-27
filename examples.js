@@ -282,7 +282,7 @@ const examples = {
   "K04": {
     "instruction": "Put the cup, the plate and the bowl from the dishwasher away in the wall cabinet.",
     "zh": "把洗碗机里的杯子、盘子和餐具放进吊柜。",
-    "environment": "The wall cabinet has a lift-up door that falls when released. Support it while transferring the dishes.",
+    "environment": "L-shaped kitchen. The wall cabinet has a lift-up door that falls when released (from its 46 deg stop it closes in about 0.9 s). The cup, plate and bowl sit on a raised rack in the dishwasher drawer at 0.70 m; the cabinet bottom is at 1.28 m and the door handle at most 1.49 m, so no hand point needs bending or overhead reach. Support the door while transferring the dishes.",
     "success": "All three items are in their designated cabinet positions. Both appliance doors are closed and the cabinet door has not struck the arm or items.",
     "steps": [
       {
@@ -312,7 +312,7 @@ const examples = {
       }
     ],
     "status": "Scene and Harbor package are present. The built kitchen uses a drawer at 95% travel, allows any free slot per item and substitutes a handled bowl. The design calls for a dishwasher door and assigned slots. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Cabinet drop force and opening-angle threshold are pending. Episode time and step limits are pending.",
+    "pending": "The door counts as raised at 40 deg. Damping and closing time are estimates until human teleoperation. Episode time and step limits are pending.",
     "images": [
       {
         "src": "images/k04-scene.png",
@@ -622,7 +622,7 @@ const examples = {
   "N03": {
     "instruction": "Put the rubbish bag from the cart into the kitchen bin.",
     "zh": "把推车上的垃圾袋放进垃圾桶。",
-    "environment": "The bin lid springs shut when released. Hold it while turning toward the bag on the cart.",
+    "environment": "Galley kitchen. A blue wheeled recycling bin (NVIDIA SimReady) with a hinged lid and a front handle bar; the lid closes by itself when released (from 75 deg in about 1.0 s). A paper shopping bag with two handles stands on a service cart parked beside the bin. From where the lid can be opened, the free hand cannot reach the bag: the robot must hold the lid open and side-step about 0.3 m. Hand points 0.73-1.35 m.",
     "success": "The bag is inside the bin, the lid is shut and the hand has not been caught.",
     "steps": [
       {
@@ -646,7 +646,7 @@ const examples = {
         "timing": false
       }
     ],
-    "status": "Scene and Harbor package are present. The parking region exists in the evaluator. The visible pedal cannot be operated. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
+    "status": "Scene rebuilt on 2026-11-27 after the review. Scripted single-step checks with the real controller: open the lid, hold it while side-stepping, and lift the bag by one handle pass; putting the bag into the bin failed in three tries (the swinging bag hit the lid or the holding hand). Server integration and an end-to-end trial are pending.",
     "pending": "The minimum opening angle is pending. Episode time and step limits are pending.",
     "images": [
       {

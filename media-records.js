@@ -315,13 +315,13 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/n03-mechanism.mp4",
-      "originalSha256": "2019adaed4cf31313683c4b4299d0ac1ed27eca5125c3536d2d6facda2cd6fb1",
-      "publicSha256": "d88112dbfad12429f1c1ae7a33e18662a07269707ff13cb3e1801b224bc3e14a",
+      "originalSha256": "4563119b219c870daaa3644f9450dccfc86541bd253c27d2cb4888f9d6630e9a",
+      "publicSha256": "80f283cadecdb482458abaa7c0e913b23fe5a5e7367cd8ba90c67b6229ec29cc",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The bin lid is released once from 75° and once from 60°; it falls shut by itself. The robot stays at its start pose.",
+      "outcome": "The lid of the blue wheelie bin is released once from 75 deg and once from 60 deg and closes by itself: within 5 deg after 1.01 s and 0.61 s of physics time, without bouncing open. A grip was added to the lid front. The robot keeps its start pose and is out of view.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Recorded with the old step bug: physics stepped at 1/60 s while the script counted 1/120 s, so the clip runs at 2x physical time; 5 s per release. With the corrected step the lid no longer falls on its own; damping is being retuned.",
-      "renderDateUTC": "2026-11-26"
+      "clock": "Physics at 1/120 s per step (verified); 5 s per release, one frame every 8 steps at 15 fps, so the clip plays in real physics time; 10 s clip",
+      "renderDateUTC": "2026-11-27"
     }
   ],
   "N05": [
@@ -518,20 +518,6 @@ const recordings = {
       "renderDateUTC": "2026-11-27"
     }
   ],
-  "K04": [
-    {
-      "kind": "mechanism",
-      "scope": "full",
-      "file": "media/k04-mechanism.mp4",
-      "originalSha256": "5fc0b5b0e6e10851f71911ac6c65ea178a3420e0d7bdaa2bcd28af7e135099e8",
-      "publicSha256": "e24534edf4000b41269709259690922e978075e8d5d0866b414a20930e2f8198",
-      "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The lift-up wall-cabinet door is released once from 90 deg and once from 100 deg and closes by itself: within 5 deg after 1.31 s and 1.41 s of physics time, stopping at 0.05 deg without bouncing open. The robot keeps its start pose.",
-      "robotModel": "RB-Y1 M v1.3",
-      "clock": "Physics at 1/120 s per step (verified); 6 s per release, one frame every 8 steps at 15 fps, so the clip plays in real physics time; 12 s clip",
-      "renderDateUTC": "2026-11-27"
-    }
-  ],
   "W05": [
     {
       "kind": "mechanism",
@@ -557,6 +543,20 @@ const recordings = {
       "outcome": "Self-check; the robot keeps its start pose. 0-2 s: the empty N10 cart stands on the flat floor at the foot of the ramp and the red toolbox on the table; nothing moves. 2-7 s: the self-check sets the empty cart in the yellow loading zone on the 0.95 deg ramp and lets go: it rolls back 1.40 m. 7-13 s: the cart is set in the zone again and an evaluation-side hold rig (a spring on the push bar, about 1.07 N) holds it; the self-check puts the toolbox on the top shelf (no hand does this). The cart moves 2.9 mm and the toolbox comes to rest. 13-18 s: the rig lets go and the loaded cart rolls back 1.48 m with the toolbox.",
       "robotModel": "RB-Y1 M v1.3",
       "clock": "Physics at 120 Hz; 18 s self-check, one frame every 8 steps, played at 1x, 18 s clip; main view the loading zone, top-right inset the whole scene",
+      "renderDateUTC": "2026-11-27"
+    }
+  ],
+  "K04": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/k04-mechanism.mp4",
+      "originalSha256": "9e21e2d7af5f1afd05f6eade2f20edfdce49376fb02bda464728adef86fb2ec3",
+      "publicSha256": "9593d6f0178e746a73c8a388351230f0aab8271758e5c68079cf60cea3b36e0c",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The lift-up wall-cabinet door is released once from its 46 deg stop and once from 40 deg and closes by itself: within 5 deg after 0.91 s and 0.86 s of physics time, stopping at 0.04 deg without bouncing open. The cabinet hangs at 1.28 m with a 46 deg opening stop, and the cup, plate and bowl stand on a raised rack at 0.70 m in the dishwasher. The robot keeps its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Physics at 1/120 s per step (verified); 6 s per release, one frame every 8 steps at 15 fps, so the clip plays in real physics time; 12 s clip",
       "renderDateUTC": "2026-11-27"
     }
   ]
