@@ -242,7 +242,7 @@ const examples = {
   "K03": {
     "instruction": "Swap the bottle inside the fridge with the cup outside it, then close the fridge door. Both items must end upright.",
     "zh": "交换冰箱里的瓶子和外面的杯子，让两件物品保持直立，再关上冰箱门。",
-    "environment": "The design calls for a narrow kitchen. The built scene uses an L-shaped kitchen. The robot holds a self-closing door while swapping the items.",
+    "environment": "Single-wall kitchen with a French-door fridge whose doors close by themselves from any opening angle, like a commercial display fridge (from the stop in about 6 s, from 60 deg in about 4.5 s of physics time). The bottle stands on a fridge shelf and the cup on a cork pad on the counter; hand points are 0.89-1.40 m. The robot holds a door open while swapping the items.",
     "success": "The bottle and cup are upright in their exchanged locations. The fridge is closed and the door has not trapped an arm or either item.",
     "steps": [
       {
@@ -266,8 +266,8 @@ const examples = {
         "timing": false
       }
     ],
-    "status": "Scene built. The current package includes the environment and tests. Server integration and a full run of the revised design are pending. The legacy recording shows a different procedure.",
-    "pending": "Door return force and episode limits are pending.",
+    "status": "Scene checked on 2026-11-27 under the 1/120 s physics step, with a new mechanism video. Server integration and a full run of the revised design are pending. The older scripted recording shows a different procedure.",
+    "pending": "Door closing time is an estimate (no product specification found). Episode limits are pending.",
     "images": [
       {
         "src": "images/k03-scene.png",
