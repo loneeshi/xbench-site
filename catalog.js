@@ -16,7 +16,7 @@ const catalogue = [
   {"id": "N01", "title": "Chest freezer retrieval", "scene": "Kitchen", "dynamic": "D1", "efficiency": "E3"},
   {"id": "N02", "title": "Collect a buffet dish", "scene": "Office", "dynamic": "D2b", "efficiency": "E3"},
   {"id": "N03", "title": "Load the bin liner", "scene": "Kitchen", "dynamic": "D1", "efficiency": "E3"},
-  {"id": "N04", "title": "Chock the handcart", "scene": "Warehouse", "dynamic": "D1", "efficiency": "E3"},
+  {"id": "N04", "title": "Hold the cart on the ramp and load it", "scene": "Warehouse", "dynamic": "D1", "efficiency": "E3"},
   {"id": "N05", "title": "Pass a saucepan through the timed hatch", "scene": "Kitchen", "dynamic": "D1", "efficiency": "E2"},
   {"id": "N06", "title": "Carry a box through the revolving door", "scene": "Office", "dynamic": "D2b", "efficiency": "E3"},
   {"id": "N07", "title": "Pick from the turntable", "scene": "Office", "dynamic": "D2b", "efficiency": "E2"},

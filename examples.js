@@ -661,33 +661,33 @@ const examples = {
   },
   "N04": {
     "instruction": "Push the handcart uphill to the loading position and load the cargo onto it.",
-    "zh": "把推车推到斜坡上的装货位，再把货搬上车。",
-    "environment": "An unsupported cart rolls downhill. Push it uphill and hold it while chocking a wheel.",
-    "success": "The cart stays in the loading position with the cargo on it and does not roll back downhill.",
+    "zh": "把推车推上坡到装货区，左手扶住车，右手把桌上的工具箱放到车上。",
+    "environment": "Warehouse with a gentle 0.95 deg ramp. An empty double-deck service cart (the N10 cart) stands on the flat floor at the foot of the ramp. A red 1 kg toolbox with an upright handle sits on a level table beside the loading zone, which is on the slope. A released cart rolls back down: about 1.4 m in 5 s.",
+    "success": "The cart is in the loading zone with the toolbox at rest on its top deck, and the cart never rolled back more than 0.075 m from the highest point it reached.",
     "steps": [
       {
-        "criterion": "Bring the chock on the cart or place it in the marked area beside the loading position.",
+        "criterion": "Push the cart into the loading zone on the slope.",
         "points": 25,
         "timing": false
       },
       {
-        "criterion": "Reach the loading position without exceeding the permitted rollback distance (pending). Record uphill pushing time.",
+        "criterion": "Lift the toolbox off the table (at least 2 cm).",
+        "points": 25,
+        "timing": false
+      },
+      {
+        "criterion": "Keep the left hand on the cart handle and the cart in the zone during the whole transfer. Scored over the interval.",
         "points": 25,
         "timing": true
       },
       {
-        "criterion": "Set the chock on the downhill side of the wheel. After both hands release, displacement over five seconds must stay below a pending threshold.",
-        "points": 25,
-        "timing": true
-      },
-      {
-        "criterion": "Load the cargo while the cart remains in position.",
+        "criterion": "Leave the toolbox at rest on the top deck (moving less than 1 cm in 1 s) while the cart is in the zone.",
         "points": 25,
         "timing": false
       }
     ],
-    "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Rollback and post-release displacement limits are pending. Episode time and step limits are pending.",
+    "status": "Scene rebuilt on 2026-11-27 after the review and Harbor package updated. Server integration and an end-to-end trial are pending.",
+    "pending": "Rollback limit 0.075 m, settle and lift thresholds are estimates until human teleoperation. Episode time and step limits are pending.",
     "images": [
       {
         "src": "images/n04-scene.jpg",
@@ -696,6 +696,10 @@ const examples = {
       {
         "src": "images/n04-head.jpg",
         "view": "Head camera at start"
+      },
+      {
+        "src": "images/n04-zone.jpg",
+        "view": "Loading zone close-up"
       }
     ]
   },
