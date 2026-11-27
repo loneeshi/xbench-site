@@ -38,7 +38,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. The legacy scripted record establishes joint departure. Arrival and unloading on the target floor remain unverified. Earlier Harbor trials ran with zero reward for both reference and no-op runs. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/o01-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/o01-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "O02": {
     "instruction": "Load the two boxes onto the flat cart and push the cart to the other side of the door. Both boxes must stay on the cart.",
@@ -69,7 +78,16 @@ const examples = {
     ],
     "status": "Scene built. The package includes the environment, tests and a reference-solution entry point. Earlier Harbor trials ran; both the reference and no-op runs received zero reward. A successful end-to-end run under the current rules is pending.",
     "pending": "The passable door angle and episode limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/o02-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/o02-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "O03": {
     "instruction": "Deliver the parcel to the delivery vehicle.",
@@ -100,7 +118,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. The recording is labelled successful, but the registry accepts only segments because the full episode record is missing. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/o03-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/o03-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "O04": {
     "instruction": "Unload the cargo from the cart at the designated location in the corridor.",
@@ -126,7 +153,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. The recorded forward, retreat and no-warning segments cover an earlier procedure. The current unloading and evacuation sequence still needs a full run. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/o04-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/o04-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "O05": {
     "instruction": "Remove the loaded cart and the large item from the arriving elevator.",
@@ -192,7 +228,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present.  Earlier Harbor trials ran with zero reward for both reference and no-op runs. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/k02-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/k02-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "K03": {
     "instruction": "Swap the bottle inside the fridge with the cup outside it, then close the fridge door. Both items must end upright.",
@@ -303,7 +348,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. The recording follows the earlier kitchen procedure. Completion of the current extinguisher task is unverified. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/k05-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/k05-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "W01": {
     "instruction": "Deliver the box to the pallet on the other side of the aisle.",
