@@ -115,6 +115,18 @@ const recordings = {
       "publicSha256": "e715e9dca263ec7f3b1dac51cdbc4274e6ed8d857627bcabbc7fe6d72643d6bd",
       "label": "Scripted · force-limited virtual planar base · clock not recorded",
       "outcome": "Paired script: A waits inside the forklift lane and is hit (failure, 114.6 s); B waits outside, then crosses (success, 169.0 s)."
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/w01-mechanism.mp4",
+      "originalSha256": "52e7e70437670a9599861c92eb7dffb0ca0760797d39b2eb6cf6de4ebb2b5846",
+      "publicSha256": "3a03bfae9984e6ca7c586c9b9283255f686582cd1d1464f47a9e6fb54f322cae",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The forklift shuttles along the aisle: 20 s stop, 11 s drive, one 62 s cycle; the robot stays still at the pick-up shelf.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Simulation at 120 Hz; 62 s played at 4x, about 15 s of video",
+      "renderDateUTC": "2026-11-26"
     }
   ],
   "W02": [
@@ -126,6 +138,18 @@ const recordings = {
       "publicSha256": "6d34d453cefeea84c00812c7909f906dacb106db29ea41676b6040f071e05e94",
       "label": "Scripted · force-limited virtual planar base · clock not recorded",
       "outcome": "Partial: only the second half, started from a saved state, passed. The full episode is not accepted."
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/w02-mechanism.mp4",
+      "originalSha256": "fd20fca88625d9584e0157ed909c190a76ba9222689f6c9fcac91896dd7f2882",
+      "publicSha256": "6e14470c6c9b5db57008bfa38e9757531354224f3b55ff627169791c11a14cce",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "An evaluation-side press on the station button starts the flow and the level in the bucket rises; a second press stops it. The robot does not move.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Simulation at 120 Hz; about 25 s played at 2x, about 12 s of video",
+      "renderDateUTC": "2026-11-26"
     }
   ],
   "W03": [
@@ -137,6 +161,18 @@ const recordings = {
       "publicSha256": "4b492cc247d41b5fb0d57d3dca116aa5fcaf7365025e31aba1bcb70b96ba9d2b",
       "label": "Scripted · force-limited virtual planar base · clock not recorded",
       "outcome": "Paired script: A sends the empty tray first (failure, 272.8 s); B loads the cargo before sending (success, 453.8 s)."
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/w03-mechanism.mp4",
+      "originalSha256": "83f3e1a4ca93be83eb119a0ff7eba4a8a41ec920878ff64bc2d78ee7772a8c9f",
+      "publicSha256": "aab6e2f8e0320b2704e6ea97a8d8ad802243a4366f95527cc4238caf4615e527",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The empty conveyor runs, but the belt surface shows no visible motion, so a slow camera move shows the scene: tray, item on the shelf and conveyor. The robot does not move.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Simulation at 120 Hz; 12 s played at 1x",
+      "renderDateUTC": "2026-11-26"
     }
   ],
   "W04": [
@@ -148,6 +184,18 @@ const recordings = {
       "publicSha256": "e9d6b533c19346a5e40b424bd87a1212fae75e7be6b1f342048784c10f2ef2cb",
       "label": "Scripted probe · force-limited virtual planar base · clock not recorded",
       "outcome": "Partial: an unassisted two-hand grasp of the moving box passed. The full episode with a box already in hand is not finished."
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/w04-mechanism.mp4",
+      "originalSha256": "5bbbf6620f23f700699bd8a48f963d94205ad6ec12adecc62e60e90e128d4abc",
+      "publicSha256": "c6964d5868bab8202c9d8a2850049f32e05f1dc30ac46533d8d2d1748cdb2d89",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The conveyor carries the incoming box toward the end at 0.003 m/s, about 0.2 m in 60 s, so the motion is small on screen; the robot does not move.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Simulation at 120 Hz; 60 s played at 4x, about 15 s of video",
+      "renderDateUTC": "2026-11-26"
     }
   ],
   "N01": [
@@ -181,13 +229,13 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/n02-mechanism.mp4",
-      "originalSha256": "33b9e73d0a975bd8df6d1e99f55324192655e6d0cb35a8d2b10fdd2b3f549571",
-      "publicSha256": "835d2eaaf7432faf998c9e99df709be9ec3b1816b36ef20c4651239a06199eb6",
+      "originalSha256": "8f112e1b627016ac1a572d9cb4c5f16f55914c9729d296247870bddbbec77631",
+      "publicSha256": "a0bd4800b8ba6504d97e4d05f3be719734fafe7558c002ece8c7fbb3c5418532",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The conveyor-ring counter keeps turning with five covered dishes on it. The robot stays at its start pose.",
+      "outcome": "The revolving counter keeps carrying five covered dishes (eared plates, arch cloche handles; target cloche bright green). The robot holds its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Sim clock 120 Hz; first 36 s of simulation at 1.5x, 24 s clip",
-      "renderDateUTC": "2026-11-26"
+      "clock": "Physics at 120 Hz; the first 36 s played at 1.5x speed, 24 s clip",
+      "renderDateUTC": "2026-11-27"
     }
   ],
   "N03": [
