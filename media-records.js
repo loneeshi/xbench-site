@@ -380,20 +380,6 @@ const recordings = {
       "renderDateUTC": "2026-11-26"
     }
   ],
-  "K04": [
-    {
-      "kind": "mechanism",
-      "scope": "full",
-      "file": "media/k04-mechanism.mp4",
-      "originalSha256": "60b18bfd46e22af8954d5188f1d52a15f5e0ec900a53a4db0a2390a4c07a56a4",
-      "publicSha256": "8db68573134777950d6655ec79e0c124ee037dd7b39771ceba4d6d362e54f113",
-      "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The lift-up cabinet door is released once from 90° and once from 100°; it falls shut by itself in about 1.3–1.4 s. The robot stays at its start pose.",
-      "robotModel": "RB-Y1 M v1.3",
-      "clock": "Recorded with the old step bug: physics stepped at 1/60 s while the script counted 1/120 s, so the 12 s clip runs at 2x physical time (the door closes in about 2.6-2.8 s of physics time). With the corrected step the door no longer falls on its own; damping is being retuned.",
-      "renderDateUTC": "2026-11-26"
-    }
-  ],
   "N10": [
     {
       "kind": "mechanism",
@@ -557,6 +543,20 @@ const recordings = {
       "outcome": "A tabletop cleaning robot, built at the real size of a WINBOT W1 PRO, drives a Z path over the long table and touches the stapler, the tape measure and the video camera in turn (physics time 14.99, 30.01 and 45.01 s), pushing each off the table edge. Nobody picks them up. The robot keeps its start pose.",
       "robotModel": "RB-Y1 M v1.3",
       "clock": "Physics at 120 Hz; 55 s self-check, one frame every 16 steps, played at 2x, 27.5 s clip",
+      "renderDateUTC": "2026-11-27"
+    }
+  ],
+  "K04": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/k04-mechanism.mp4",
+      "originalSha256": "5fc0b5b0e6e10851f71911ac6c65ea178a3420e0d7bdaa2bcd28af7e135099e8",
+      "publicSha256": "e24534edf4000b41269709259690922e978075e8d5d0866b414a20930e2f8198",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The lift-up wall-cabinet door is released once from 90 deg and once from 100 deg and closes by itself: within 5 deg after 1.31 s and 1.41 s of physics time, stopping at 0.05 deg without bouncing open. The robot keeps its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Physics at 1/120 s per step (verified); 6 s per release, one frame every 8 steps at 15 fps, so the clip plays in real physics time; 12 s clip",
       "renderDateUTC": "2026-11-27"
     }
   ]
