@@ -540,7 +540,7 @@ const examples = {
     ]
   },
   "N01": {
-    "instruction": "Take the blue food container out of the chest freezer and put it on the counter next to the freezer.",
+    "instruction": "Take the pudding box out of the chest freezer and put it on the counter next to the freezer.",
     "zh": "从冷柜取出蓝色食品盒，放到旁边的台面上。",
     "environment": "Single-wall kitchen with a long chest freezer. Three small packages from the YCB set lie on a 0.60 m support inside (target: a pudding box; others: a gelatin box and a sugar box). The lid falls when released: from 90 deg it closes in about 1.8 s of physics time. The robot supports it while moving sideways to reach the target.",
     "success": "The container rests on the counter and the lid is closed. The lid must not strike the arm or the container.",
@@ -620,7 +620,7 @@ const examples = {
     ]
   },
   "N03": {
-    "instruction": "Put the rubbish bag from the cart into the kitchen bin.",
+    "instruction": "Put the paper bag from the cart into the kitchen bin.",
     "zh": "把推车上的垃圾袋放进垃圾桶。",
     "environment": "Galley kitchen. A blue wheeled recycling bin (NVIDIA SimReady) with a hinged lid and a front handle bar; the lid closes by itself when released (from 75 deg in about 1.0 s). A paper shopping bag with two handles stands on a service cart parked beside the bin. From where the lid can be opened, the free hand cannot reach the bag: the robot must hold the lid open and side-step about 0.3 m. Hand points 0.73-1.35 m.",
     "success": "The bag is inside the bin, the lid is shut and the hand has not been caught.",
@@ -660,7 +660,7 @@ const examples = {
     ]
   },
   "N04": {
-    "instruction": "Push the handcart uphill to the loading position and load the cargo onto it.",
+    "instruction": "Push the handcart up the ramp into the loading zone, then load the toolbox from the table onto its top shelf.",
     "zh": "把推车推上坡到装货区，左手扶住车，右手把桌上的工具箱放到车上。",
     "environment": "Warehouse with a gentle 0.95 deg ramp. An empty double-deck service cart (the N10 cart) stands on the flat floor at the foot of the ramp. A red 1 kg toolbox with an upright handle sits on a level table beside the loading zone, which is on the slope. A released cart rolls back down: about 1.4 m in 5 s.",
     "success": "The cart is in the loading zone with the toolbox at rest on its top deck, and the cart never rolled back more than 0.075 m from the highest point it reached.",
