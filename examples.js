@@ -910,7 +910,7 @@ const examples = {
     ]
   },
   "N11": {
-    "instruction": "Put the three things lying on the kitchen floor into the basket on the counter.",
+    "instruction": "Put the three things on the table into the basket at the end of the table.",
     "zh": "把地上的三样东西收进篮子里。",
     "environment": "A long table (0.75 m high) in the U-shaped kitchen. A tabletop cleaning robot, built at the real size of an Ecovacs WINBOT W1 PRO (27 x 27 cm), sweeps the table once on a back-and-forth path at 0.25 m/s. A stapler, a tape measure and a small video camera (Poly Haven, CC0) lie on its path; the basket stands at the far end of the table, outside the path.",
     "success": "All three objects are in the basket, and the cleaning robot touched or pushed none of them.",
