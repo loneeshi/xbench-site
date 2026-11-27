@@ -280,7 +280,7 @@ const recordings = {
       "label": "Mechanism demo · robot stays still · not a solution",
       "outcome": "The chest-freezer lid is released once from 90° and once from 60°; it falls shut by itself. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Sim clock 120 Hz; real time, 6 s per release",
+      "clock": "Recorded with the old step bug: physics stepped at 1/60 s while the script counted 1/120 s, so the clip runs at 2x physical time; 6 s per release. With the corrected step the lid no longer falls from 90 deg; damping is being retuned.",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -320,7 +320,7 @@ const recordings = {
       "label": "Mechanism demo · robot stays still · not a solution",
       "outcome": "The bin lid is released once from 75° and once from 60°; it falls shut by itself. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Sim clock 120 Hz; real time, 5 s per release",
+      "clock": "Recorded with the old step bug: physics stepped at 1/60 s while the script counted 1/120 s, so the clip runs at 2x physical time; 5 s per release. With the corrected step the lid no longer falls on its own; damping is being retuned.",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -390,7 +390,7 @@ const recordings = {
       "label": "Mechanism demo · robot stays still · not a solution",
       "outcome": "The lift-up cabinet door is released once from 90° and once from 100°; it falls shut by itself in about 1.3–1.4 s. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Sim clock 120 Hz; real time, 6 s per release, 12 s clip",
+      "clock": "Recorded with the old step bug: physics stepped at 1/60 s while the script counted 1/120 s, so the 12 s clip runs at 2x physical time (the door closes in about 2.6-2.8 s of physics time). With the corrected step the door no longer falls on its own; damping is being retuned.",
       "renderDateUTC": "2026-11-26"
     }
   ],
