@@ -329,7 +329,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. Earlier scripted comparisons include a forklift-contact failure and a successful delivery. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/w01-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/w01-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "W02": {
     "instruction": "Fill both drums to the required level and move them to the storage area. No material may spill.",
@@ -365,7 +374,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. The second half was accepted from a saved intermediate state. A complete run from the beginning is pending. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/w02-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/w02-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "W03": {
     "instruction": "Put the item on the tray so that the item and the tray leave together on the conveyor.",
@@ -386,7 +404,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. Earlier scripted comparisons include an empty-tray failure and a loaded-tray success. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/w03-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/w03-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "W04": {
     "instruction": "Place the box you are holding and the box arriving on the conveyor at their designated places. Neither box may fall.",
@@ -412,7 +439,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. A two-handed catch was demonstrated. The full placement sequence is unverified. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/w04-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/w04-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "W05": {
     "instruction": "Load the two boxes into the inner and outer cargo slots of the tugger trailer.",
