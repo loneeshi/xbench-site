@@ -24,12 +24,12 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/o02-mechanism.mp4",
-      "originalSha256": "2ceec6e766b22f0c10c18493add36084960e78a8f2b8b62d7035dfe8b61a82aa",
-      "publicSha256": "a5fa70db8382eee4aae91c7b8aa08c0870cce63912542589b64d3823f0d554f6",
+      "originalSha256": "1d0dddc49a80f94ffbf2067bd694d30e88fc43f6ee12c8f2c2452551d447bb5b",
+      "publicSha256": "413b66ceb98aaa855c69f23cd07496ce1ab46f69ccdf1085367fb2ddd18d3b1a",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The door leaf swings back from about 86° to closed by itself. The robot stays at its start pose.",
-      "robotModel": "RB-Y1 A v1.2",
-      "clock": "Sim clock 120 Hz; 144 s of simulation at 8x, 18 s clip",
+      "outcome": "The door leaf is released at about 86 deg, swings slowly back to 60 deg over about 120 s (delayed-action closer) and then closes by itself. The robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Simulation clock 120 Hz; 144 s shown at 8x; clip 18 s",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -42,6 +42,18 @@ const recordings = {
       "publicSha256": "8ba076970618a7bf111ba01a515689a9aed945fcba921c1365e72a4e46dd2121",
       "label": "Scripted · two-wheel RB-Y1 A · paused clock",
       "outcome": "Full scripted pass of the current design (run kb-a06b-full-16): push the cart out of the path, take the extinguisher off its rack, return to the marked area before the fire limit. Three views at 4x speed."
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/k05-mechanism.mp4",
+      "originalSha256": "3d8ba4a7475d2cf704d5b00dcb1f07ab77096661159c69c2f100601416a31a54",
+      "publicSha256": "fa319f12afc875c3ad90feea00cba604a32c5bddf1d962b14f7fcbae9470bf8e",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The stove fire lights at 5 s and grows to full size over the next 60 s. The extinguisher on the wall and the cart in the aisle stay put; the robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Task clock counted at 1/120 s per step; 71 s shown at 4x; clip 18 s (this kitchen's physics actually steps at 1/60 s, see docs/design-changes-K05.zh.md)",
+      "renderDateUTC": "2026-11-26"
     }
   ],
   "K02": [
@@ -53,6 +65,18 @@ const recordings = {
       "publicSha256": "240f0629af155d9b00edcf6a8a511fddbfb11dcf16d239197e6c1350d1ad53f8",
       "label": "Scripted · two-wheel RB-Y1 A · paused clock",
       "outcome": "Full scripted pass under legacy conditions."
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/k02-mechanism.mp4",
+      "originalSha256": "6f4bff53c0e200a7ae73f940a676ad49169e98f9cf2dc198b55203608af94495",
+      "publicSha256": "090f46104ae3c01781c375870c7f8d18e9ccdccf80e2c1173922c288e31dbddd",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The floor robot mops the aisle lane by lane from the east wall; mopped tiles turn wet, all 80 by about 512 s. The tray with the dish and drinks stays put; the robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Task clock counted at 1/120 s per step; 560 s shown at 40x; clip 14 s (this kitchen's physics actually steps at 1/60 s, see docs/design-changes-K02.zh.md)",
+      "renderDateUTC": "2026-11-26"
     }
   ],
   "O01": [
@@ -64,6 +88,18 @@ const recordings = {
       "publicSha256": "71100de1ffedc587355392a0b10269a91effd4facbfcf8d4469ed67090ebced2",
       "label": "Scripted · two-wheel RB-Y1 A · paused clock",
       "outcome": "Partial coverage: departure together; final exit at the target floor is unverified."
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/o01-mechanism.mp4",
+      "originalSha256": "e5ffcf09bc7f2d0bac0da1435aa0f49fcced5f21ef6208313db736be6a469441",
+      "publicSha256": "e1c1accc75e5fe9854ea4c02db0a6ce9e8b5bc7da67941dbeafd628b4f532543",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "After the hall call the elevator doors open to 0.66 m in 3.2 s, stay open 180 s and close; the floor display and button lamps follow. The robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Simulation clock 120 Hz; 213 s shown at 16x; clip 13 s",
+      "renderDateUTC": "2026-11-26"
     }
   ],
   "O04": [
@@ -93,6 +129,18 @@ const recordings = {
       "publicSha256": "104f31da5cfa17506cf374632bb0a0a86ef743d5ca55f8be031cdf26d6c23730",
       "label": "Scripted · two-wheel RB-Y1 A · paused clock",
       "outcome": "Partial: no-warning segment."
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/o04-mechanism.mp4",
+      "originalSha256": "e4c19cbe74b1dd3506331eb8f18e5ecf79ee9ec1ee8a1da51dff4ce7aa60f03d",
+      "publicSha256": "5e558118c7445bf9c12dac5892ae65a52e2fc4722d868e590d7b0581da7d0693",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The fire doors are held open at 90 deg. After the alarm the red strobe lights, both leaves close to 10 deg within 60 s and are shut and locked at 67 s. The robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Simulation clock 120 Hz; 88 s shown at 6x; clip 15 s",
+      "renderDateUTC": "2026-11-26"
     }
   ],
   "O03": [
@@ -104,6 +152,18 @@ const recordings = {
       "publicSha256": "316690af00095c6d09a6ba0a833eef32edf222336912e7fb7e1e53bec2ac375c",
       "label": "Scripted · two-wheel RB-Y1 A · paused clock",
       "outcome": "The recording is labelled successful, but the registry accepts only segments because the full episode record is missing."
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/o03-mechanism.mp4",
+      "originalSha256": "94b79ef137e195d8e20ac002d8dbedffa7b9fc93a78daf77480efe9b8dd92000",
+      "publicSha256": "80246ee5a7997aa17bd0eea9b3365ef88e1499e9600406161c91604c57d772ba",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The delivery cart drives in to its stop on schedule (80 s), opens its compartment doors, waits until 710 s, closes and drives away. The robot stays at its start pose, outside this camera view.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Simulation clock 120 Hz; 742 s shown at 48x; clip 16 s",
+      "renderDateUTC": "2026-11-26"
     }
   ],
   "W01": [
