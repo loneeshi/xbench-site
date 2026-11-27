@@ -152,7 +152,16 @@ const examples = {
     ],
     "status": "Scene and Harbor package are present. The elevator scene exists. No accepted full run is recorded. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
     "pending": "Episode time and step limits are pending.",
-    "images": []
+    "images": [
+      {
+        "src": "images/o05-scene.jpg",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/o05-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
   },
   "K02": {
     "instruction": "Bring the two drinks and the dish to the dining table. Nothing may spill or fall.",

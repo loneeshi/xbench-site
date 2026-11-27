@@ -340,6 +340,18 @@ const recordings = {
       "robotModel": "RB-Y1 M v1.3",
       "clock": "Real time, 4 min 39 s",
       "renderDateUTC": "2026-11-26"
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/o05-mechanism.mp4",
+      "originalSha256": "d895492f6df7850898f239824e1928336870500b1c46782b4ebe61da01a35f81",
+      "publicSha256": "ca9b95115aa1da8406d5cfaecd5b6ccd58781675b848e42a552817f96845f949",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The elevator comes down from floor 7, the doors open, stay fully open for 8 s (a demo value), close, and the car is then called to another floor. The robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Sim clock 120 Hz; real time, 26.5 s clip",
+      "renderDateUTC": "2026-11-26"
     }
   ],
   "N07": [

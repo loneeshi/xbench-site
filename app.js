@@ -1,4 +1,4 @@
-const LEGACY_A = ['O01','O02','O03','O04','O05','K02','K05'];
+const LEGACY_A = ['O01','O02','O03','O04','K02','K05'];
 const LEGACY_PLANAR = ['W01','W02','W03','W04'];
 function robotLine(id) {
   if (LEGACY_A.includes(id)) return 'Robot: the scene is being moved to RB-Y1 M v1.3 (mecanum base, running clock). Recorded scripted demos used the two-wheel RB-Y1 A with a paused clock.';
