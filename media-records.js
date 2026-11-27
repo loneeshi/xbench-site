@@ -24,24 +24,15 @@ const recordings = {
   ],
   "O02": [
     {
-      "kind": "scripted",
-      "scope": "full",
-      "file": "media/o02-scripted.mp4",
-      "originalSha256": "a29ffda70d5c2c8844ce59a08959a570442c9bf39b5ee8332d72240c98e4b3fe",
-      "publicSha256": "4cd936903a2fe1bbefd85c7501182a9e8cb101fd03e2c96009c6dc6d93159129",
-      "label": "Scripted · two-wheel RB-Y1 A · paused clock",
-      "outcome": "Full scripted pass under the legacy two-wheel, paused-clock conditions."
-    },
-    {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/o02-mechanism.mp4",
-      "originalSha256": "419cfa6f96745ec1d41bf935b8e948a845dd01a41a9d33ea819667c44a30c8a1",
-      "publicSha256": "abf61bc01b9c234678ecedca687362f01ad0b60a369e34c4c3dab1b81c62a222",
+      "originalSha256": "be8e11fef088d1a8ce9d240d4d672e3e4a601fab7bd8b201a8fdee7f01f4263e",
+      "publicSha256": "2c0ee9ee63f8fb488fa4f2c6e81b9ab01f48d946fb2631a4e20d5a556a1be951",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The cart is now a service cart with a 0.635 m deck. The door leaf is released at about 86 deg, swings slowly back to 60 deg over about 120 s (delayed-action closer) and then closes by itself. The robot and the cart stay still.",
+      "outcome": "The two boxes now start on an office table beside the robot (top 0.75 m), not on the reception desk behind it. The door leaf is released at about 86 deg, swings slowly back to 60 deg over about 120 s (delayed-action closer) and then closes by itself. The robot, the cart and the boxes stay still.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Simulation clock 120 Hz; 144 s shown at 8x; clip 18 s",
+      "clock": "Physics at 1/120 s per step; 144 s shown at 8x; clip 18 s",
       "renderDateUTC": "2026-11-27"
     }
   ],

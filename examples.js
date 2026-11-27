@@ -52,7 +52,7 @@ const examples = {
   "O02": {
     "instruction": "Load the two boxes onto the service cart and push the cart to the other side of the door. Both boxes must stay on the cart.",
     "zh": "把两箱货装上平板车，把车推到门的另一侧。两箱货都要留在车上。",
-    "environment": "Office corridor with a door closer. Pushing starts the door’s motion. The robot must get through before it closes. The cart is a two-shelf service cart with its top shelf at 0.635 m, so no box sits below 0.6 m.",
+    "environment": "Office corridor with a door closer. Pushing starts the door’s motion. The robot must get through before it closes. The two boxes start on an office table on the robot’s left (top 0.75 m), so the task needs no search or long travel. The cart is a two-shelf service cart with its top shelf at 0.635 m, so no box sits below 0.6 m.",
     "success": "The cart and both boxes reach the far side of the door without any cargo falling.",
     "steps": [
       {
@@ -76,7 +76,7 @@ const examples = {
         "timing": true
       }
     ],
-    "status": "Scene built. The package includes the environment, tests and a reference-solution entry point. Earlier Harbor trials ran; both the reference and no-op runs received zero reward. A successful end-to-end run under the current rules is pending.",
+    "status": "Scene built on RB-Y1 M v1.3 with the boxes on the near table (2026-11-27). The Harbor package starts with a running clock and 1/120 s physics. The old scripted solution (two-wheel robot, boxes on the reception desk) no longer applies and its video was removed. A successful end-to-end run under the current rules is pending.",
     "pending": "The passable door angle and episode limits are pending.",
     "images": [
       {
