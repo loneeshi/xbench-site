@@ -52,7 +52,7 @@ const examples = {
   "O02": {
     "instruction": "Load the two boxes onto the flat cart and push the cart to the other side of the door. Both boxes must stay on the cart.",
     "zh": "把两箱货装上平板车，把车推到门的另一侧。两箱货都要留在车上。",
-    "environment": "Office corridor with a door closer. Pushing starts the door’s motion. The robot must get through before it closes.",
+    "environment": "Office corridor with a door closer. Pushing starts the door’s motion. The robot must get through before it closes. The cart is a two-shelf service cart with its top shelf at 0.635 m, so no box sits below 0.6 m.",
     "success": "The cart and both boxes reach the far side of the door without any cargo falling.",
     "steps": [
       {
@@ -132,11 +132,11 @@ const examples = {
   "O04": {
     "instruction": "Unload the cargo from the cart at the designated location in the corridor.",
     "zh": "把车上的货卸到走廊的指定位置。",
-    "environment": "A warning precedes a one-off fire-door closure in the corridor.",
+    "environment": "A warning precedes a one-off fire-door closure in the corridor. The cart is a two-shelf service cart (top shelf 0.635 m); the boxes are unloaded onto a folding table (0.737 m) against the corridor wall.",
     "success": "After the warning, clear the cart and boxes before the fire door closes. Park the cart and robot in the bay.",
     "steps": [
       {
-        "criterion": "Leave the box stationary in the designated unloading area.",
+        "criterion": "Leave the box stationary on the unloading table.",
         "points": 33,
         "timing": false
       },
@@ -700,41 +700,36 @@ const examples = {
     ]
   },
   "N05": {
-    "instruction": "Pass the parcel from the cart through the serving hatch and put it down on the counter on the other side.",
+    "instruction": "Push the cart to the serving hatch and pass the saucepan from the cart through the hatch onto the counter on the other side.",
     "zh": "把推车上的东西递到卷帘的另一侧放好。",
-    "environment": "The serving shutter retracts when released. Keep it supported while reaching for the parcel and passing it through.",
-    "success": "The parcel is stable on the far side and the shutter has not struck the arm.",
+    "environment": "A serving hatch with a push button beside it. Pressing the button raises the shutter in about 4 s; it stays open for 10 s and then lowers by itself. Pressing again while it lowers raises it again. A 16 cm lidded saucepan with a handle (1.28 kg) stands on a service cart.",
+    "success": "The saucepan is at rest on the far counter. The lowering shutter never touched the robot or the saucepan.",
     "steps": [
       {
         "criterion": "Park the cart in the marked area beside the hatch.",
-        "points": 25,
+        "points": 33,
         "timing": false
       },
       {
-        "criterion": "Hold the shutter high enough for the parcel to pass. The height is pending.",
-        "points": 25,
+        "criterion": "Open the shutter with the button.",
+        "points": 33,
         "timing": false
       },
       {
-        "criterion": "Move and pass the parcel while supporting the shutter. Leave it stationary on the far counter without the shutter pressing on the arm. Record support duration.",
-        "points": 25,
+        "criterion": "Before the shutter closes, put the saucepan at rest on the far counter. Record the time left.",
+        "points": 34,
         "timing": true
-      },
-      {
-        "criterion": "Withdraw the arm before releasing the shutter.",
-        "points": 25,
-        "timing": false
       }
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "The minimum hatch opening height is pending. Episode time and step limits are pending.",
+    "pending": "Proposed English first sentence, pending approval. Open time 10 s and shutter speed are estimates, to be set from interface-measured action times.",
     "images": [
       {
-        "src": "images/n05-scene.png",
+        "src": "images/n05-scene.jpg",
         "view": "Full scene at start"
       },
       {
-        "src": "images/n05-head.png",
+        "src": "images/n05-head.jpg",
         "view": "Head camera at start"
       }
     ]
@@ -805,24 +800,29 @@ const examples = {
     ]
   },
   "N08": {
-    "instruction": "Put the document box from the small table onto the table on the other side of the speed gate, then pull your arms back to this side.",
+    "instruction": "Take the desk organiser from the small table through the speed gate and put it on the table on the other side.",
     "zh": "把东西放到闸机门的另一侧。",
-    "environment": "The gate repeatedly opens and closes. Reach through and withdraw during one opening.",
-    "success": "The item rests on the far side and the gate has not trapped the arm.",
+    "environment": "An office speed gate opens and closes on a fixed cycle. A portable desk organiser with a centre handle (380 x 255 x 190 mm, 0.59 kg) stands on a small table. The receiving table stands against the east wall behind the gate, beyond the glass fence, so the walkway stays clear.",
+    "success": "The organiser is on the table behind the gate. The gate never struck the robot.",
     "steps": [
       {
-        "criterion": "Grasp the item and move to the approach region.",
-        "points": 50,
+        "criterion": "Hold the organiser and stand in front of the gate.",
+        "points": 33,
         "timing": false
       },
       {
-        "criterion": "Place the item securely beyond the gate and withdraw without gate contact. Record time from withdrawal until closing starts.",
-        "points": 50,
+        "criterion": "Pass through the gate with the organiser while it is open.",
+        "points": 33,
         "timing": true
+      },
+      {
+        "criterion": "Put the organiser on the receiving table.",
+        "points": 34,
+        "timing": false
       }
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Episode time and step limits are pending.",
+    "pending": "Proposed English first sentence, pending approval. Episode time and step limits are pending.",
     "images": [
       {
         "src": "images/n08-scene.jpg",
@@ -985,29 +985,34 @@ const examples = {
     ]
   },
   "N13": {
-    "instruction": "Close and latch the lids of two boxes on the conveyor.",
+    "instruction": "Unlock the colour code lock on the box on the conveyor by pressing its buttons in the order shown on its display.",
     "zh": "把传送带上两个箱子的盖子合上扣好。",
-    "environment": "Boxes with hinged lids pass on a conveyor. Follow each one long enough to close and latch it.",
-    "success": "Both lids are latched when the boxes reach the end, and neither box has fallen off the belt.",
+    "environment": "One box rides the conveyor. On its side are red, yellow and blue spring buttons, a display showing the order to press, and a lock lamp that turns from red to green when the code is right. A wrong press resets the code. Walk along the belt to press the buttons in time.",
+    "success": "The lock is open before the box reaches the end of the belt.",
     "steps": [
       {
-        "criterion": "Stand inside the marked area beside the belt with a hand over it.",
-        "points": 33,
+        "criterion": "Stand in the marked area beside the belt.",
+        "points": 25,
         "timing": false
       },
       {
-        "criterion": "Close and latch the first lid before the box reaches the end, keeping it on the belt. Record time remaining.",
-        "points": 33,
-        "timing": true
+        "criterion": "Press the first colour correctly.",
+        "points": 25,
+        "timing": false
       },
       {
-        "criterion": "Close and latch the second under the same conditions. Record time remaining and the number of boxes used.",
-        "points": 34,
+        "criterion": "Press the first two colours correctly.",
+        "points": 25,
+        "timing": false
+      },
+      {
+        "criterion": "Open the lock before the box reaches the end. Record the time left.",
+        "points": 25,
         "timing": true
       }
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Design estimates: 0.1 m/s belt, 4 m working section, 40 seconds per box and 3 m spacing. Episode time and step limits are pending.",
+    "pending": "Proposed English first sentence, pending approval. Belt speed and length unchanged from the earlier design. With one box a miss is final (D2a).",
     "images": [
       {
         "src": "images/n13-scene.jpg",
@@ -1092,8 +1097,8 @@ const examples = {
   "N16": {
     "instruction": "Carry the long board with the freight vehicle to the unloading point and place it on the rack.",
     "zh": "和运货车一起把长板抬到卸货点，放到架子上。",
-    "environment": "A freight vehicle supports one end of a board and follows a fixed route. Carry the other end at its pace around the bend.",
-    "success": "The board rests on the unloading rack. It has not fallen, and the vehicle has not struck the robot.",
+    "environment": "A tug and the robot move side by side; the long board lies across between them, one end in the tug cradle and the other held by the robot. The tug follows a fixed route at 0.2 m/s with a wide turn; the robot walks on the inner side. At the end the cradle lowers 10 cm and the board settles on a pallet stack 0.75 m high.",
+    "success": "The board rests on the pallet stack at the unloading point. It never fell, and the tug never struck the robot.",
     "steps": [
       {
         "criterion": "Lift the free end from its support with both hands.",
@@ -1117,7 +1122,7 @@ const examples = {
       }
     ],
     "status": "Scene and Harbor package are present. The scene judge can accept stable final placement even if earlier straight or turn milestones were unrecorded. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Design estimates: 2 m board, 0.2 m/s vehicle and a 6 m straight followed by a right-angle turn and another 3 m. Episode time and step limits are pending.",
+    "pending": "Route and speeds are estimates. Episode time and step limits are pending.",
     "images": [
       {
         "src": "images/n16-scene.jpg",
