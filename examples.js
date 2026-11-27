@@ -52,7 +52,7 @@ const examples = {
   "O02": {
     "instruction": "Load the two boxes from the table on your left onto the service cart, then push the cart to the other side of the door. Both boxes must stay on the cart.",
     "zh": "把左边桌上的两箱货装上服务车，再把车推到门的另一侧。两箱货都要留在车上。",
-    "environment": "Office corridor with a door closer. Pushing starts the door’s motion. The robot must get through before it closes. The two boxes start on an office table on the robot’s left (top 0.75 m), so the task needs no search or long travel. The cart is a two-shelf service cart with its top shelf at 0.635 m, so no box sits below 0.6 m.",
+    "environment": "Office corridor with a door closer. Pushing starts the door’s motion. The robot must get through before it closes. The two boxes start on an office table on the robot’s left (top 0.75 m), so the task needs no search or long travel. Each box has a carry handle across its top, so one hand can lift it. The cart is a two-shelf service cart with its top shelf at 0.635 m, so no box sits below 0.6 m.",
     "success": "The cart and both boxes reach the far side of the door without any cargo falling.",
     "steps": [
       {

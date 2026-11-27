@@ -27,10 +27,10 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/o02-mechanism.mp4",
-      "originalSha256": "be8e11fef088d1a8ce9d240d4d672e3e4a601fab7bd8b201a8fdee7f01f4263e",
-      "publicSha256": "2c0ee9ee63f8fb488fa4f2c6e81b9ab01f48d946fb2631a4e20d5a556a1be951",
+      "originalSha256": "547e61f139f7d385729a0d2927099a00ffa52ef461d4d018823400d83aa2304c",
+      "publicSha256": "333b2013e11550a9058066ae3ebd7488b6cce80e4af2392759e927f1d53e6fb3",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The two boxes now start on an office table beside the robot (top 0.75 m), not on the reception desk behind it. The door leaf is released at about 86 deg, swings slowly back to 60 deg over about 120 s (delayed-action closer) and then closes by itself. The robot, the cart and the boxes stay still.",
+      "outcome": "The two boxes now start on an office table beside the robot (top 0.75 m), not on the reception desk behind it. Each box has a carry handle across its top that one hand can grip. The door leaf is released at about 86 deg, swings slowly back to 60 deg over about 120 s (delayed-action closer) and then closes by itself. The robot, the cart and the boxes stay still.",
       "robotModel": "RB-Y1 M v1.3",
       "clock": "Physics at 1/120 s per step; 144 s shown at 8x; clip 18 s",
       "renderDateUTC": "2026-11-27"
