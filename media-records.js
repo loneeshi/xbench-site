@@ -504,20 +504,6 @@ const recordings = {
       "renderDateUTC": "2026-11-26"
     }
   ],
-  "N04": [
-    {
-      "kind": "mechanism",
-      "scope": "full",
-      "file": "media/n04-mechanism.mp4",
-      "originalSha256": "667b3b43bb7a66715bdb16d0e72664e056b9279f5dae5d7cc223a762afa9beb3",
-      "publicSha256": "eb3da58f13f155f7adb8694e4b91b326d52eeb43848a7ca934b8a55d130eaeb1",
-      "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "On the loading spot on the 0.95 degree slope, the released handcart slides 1.69 m in 5 s without a chock and only 0.03 m with the chock under a wheel (the self-check places cart and chock directly). The robot stays at its start pose.",
-      "robotModel": "RB-Y1 M v1.3",
-      "clock": "Physics clock 120 Hz; real time, 5 s per release, 10 s clip",
-      "renderDateUTC": "2026-11-26"
-    }
-  ],
   "N11": [
     {
       "kind": "mechanism",
@@ -557,6 +543,20 @@ const recordings = {
       "outcome": "The tugger runs one loop: it leaves after a 30 s stop and returns to the stop after about 92 s. The two toolboxes sit on the pick table and the staging table is clear of the loading stand. The robot keeps its start pose.",
       "robotModel": "RB-Y1 M v1.3",
       "clock": "Physics at 1/120 s per step; one 92 s loop, one frame every 64 steps at 15 fps, so the clip plays at 8x; 11.5 s clip",
+      "renderDateUTC": "2026-11-27"
+    }
+  ],
+  "N04": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n04-mechanism.mp4",
+      "originalSha256": "4ac61eca56bad224318bc1bef8e132793fb2fe52f5ec838e9282e223154fd9dd",
+      "publicSha256": "0839671430a80a0319f4b57fff3cf400a19c9421fd0f10fbd69af43e007181d2",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "Self-check; the robot keeps its start pose. 0-2 s: the empty N10 cart stands on the flat floor at the foot of the ramp and the red toolbox on the table; nothing moves. 2-7 s: the self-check sets the empty cart in the yellow loading zone on the 0.95 deg ramp and lets go: it rolls back 1.40 m. 7-13 s: the cart is set in the zone again and an evaluation-side hold rig (a spring on the push bar, about 1.07 N) holds it; the self-check puts the toolbox on the top shelf (no hand does this). The cart moves 2.9 mm and the toolbox comes to rest. 13-18 s: the rig lets go and the loaded cart rolls back 1.48 m with the toolbox.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Physics at 120 Hz; 18 s self-check, one frame every 8 steps, played at 1x, 18 s clip; main view the loading zone, top-right inset the whole scene",
       "renderDateUTC": "2026-11-27"
     }
   ]
