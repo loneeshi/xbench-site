@@ -646,7 +646,7 @@ const examples = {
         "timing": false
       }
     ],
-    "status": "Scene rebuilt on 2026-11-27 after the review. Scripted single-step checks with the real controller: open the lid, hold it while side-stepping, and lift the bag by one handle pass; putting the bag into the bin failed in three tries (the swinging bag hit the lid or the holding hand). Server integration and an end-to-end trial are pending.",
+    "status": "Scene rebuilt on 2026-11-27 after the review. Scripted single-step checks with the real controller: open the lid, hold it while side-stepping, and lift the bag pass. Putting the bag into the bin is not yet achieved: with one handle it swings and drops (3 tries); with both handles gripped together it no longer swings but slips out of an oblique grasp (5 tries). A layout or stance change is being considered. Server integration and an end-to-end trial are pending.",
     "pending": "The minimum opening angle is pending. Episode time and step limits are pending.",
     "images": [
       {
