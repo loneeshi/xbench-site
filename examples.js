@@ -912,11 +912,11 @@ const examples = {
   "N11": {
     "instruction": "Put the three things lying on the kitchen floor into the basket on the counter.",
     "zh": "把地上的三样东西收进篮子里。",
-    "environment": "A vacuum makes a single pass along its route. Pick up the objects in time to avoid contact.",
-    "success": "All three objects are in the basket without any being touched or swept away by the vacuum.",
+    "environment": "A long table (0.75 m high) in the U-shaped kitchen. A tabletop cleaning robot, built at the real size of an Ecovacs WINBOT W1 PRO (27 x 27 cm), sweeps the table once on a back-and-forth path at 0.25 m/s. A stapler, a tape measure and a small video camera (Poly Haven, CC0) lie on its path; the basket stands at the far end of the table, outside the path.",
+    "success": "All three objects are in the basket, and the cleaning robot touched or pushed none of them.",
     "steps": [
       {
-        "criterion": "Lift the first object in the vacuum’s path before contact. Measure time until the vacuum reaches its original location.",
+        "criterion": "Lift the first object in the cleaning robot’s path before contact. Measure time until the cleaning robot reaches its original location.",
         "points": 25,
         "timing": true
       },
@@ -937,7 +937,7 @@ const examples = {
       }
     ],
     "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Design estimates: vacuum speed 0.25 m/s, arrivals at 15, 30 and 45 seconds. Episode time and step limits are pending.",
+    "pending": "Measured in the scene: cleaner speed 0.25 m/s, first contact with the three objects at 15.0, 30.0 and 45.0 s of physics time. Table height and object masses are estimates until human teleoperation. Episode time and step limits are pending.",
     "images": [
       {
         "src": "images/n11-scene.jpg",
@@ -946,6 +946,10 @@ const examples = {
       {
         "src": "images/n11-head.jpg",
         "view": "Head camera at start"
+      },
+      {
+        "src": "images/n11-cleaner.jpg",
+        "view": "Close-up of the tabletop cleaning robot"
       }
     ]
   },

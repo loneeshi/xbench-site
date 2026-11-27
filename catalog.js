@@ -23,7 +23,7 @@ const catalogue = [
   {"id": "N08", "title": "Carry an organiser through the gate", "scene": "Office", "dynamic": "D2b", "efficiency": "E2"},
   {"id": "N09", "title": "Secure the belt barrier", "scene": "Office", "dynamic": "D1", "efficiency": "E3"},
   {"id": "N10", "title": "Load the freight trailer", "scene": "Warehouse", "dynamic": "D2a", "efficiency": "E3"},
-  {"id": "N11", "title": "Collect items from the floor", "scene": "Kitchen", "dynamic": "D2a", "efficiency": "E2"},
+  {"id": "N11", "title": "Collect items from the table", "scene": "Kitchen", "dynamic": "D2a", "efficiency": "E2"},
   {"id": "N12", "title": "Move the shelf cart outside", "scene": "Warehouse", "dynamic": "D2a", "efficiency": "E2"},
   {"id": "N13", "title": "Unlock the box on the conveyor", "scene": "Warehouse", "dynamic": "D2a", "efficiency": "E3"},
   {"id": "N14", "title": "Push a cart through two doors", "scene": "Office", "dynamic": "D2b", "efficiency": "E3"},

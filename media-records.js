@@ -551,13 +551,13 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/n11-mechanism.mp4",
-      "originalSha256": "f44b2f04038ed28b11bab640930b760b611f2a7e1447e0b50e21a0993cee882f",
-      "publicSha256": "f161031cb433b8cd98fdb67c92200b6eb384a8da836acf998e733828c3ece719",
+      "originalSha256": "3c860036ef42cd496d18ac8dc93abc7c6f0c762bc2b9dc6d955d5f3f37370a6f",
+      "publicSha256": "e4d83653cb33e8101eb85b26473fa6a14507dac2a07cd41e80e399b8a9ee750e",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The robot vacuum follows its fixed back-and-forth path and reaches the slipper, the cable and the paddle in turn. The robot stays at its start pose. Interim clip: in this run the vacuum moves at half the designed speed (a timing bug, being fixed), so the reach times are about 30, 60 and 90 s instead of 15, 30 and 45 s.",
+      "outcome": "A tabletop cleaning robot, built at the real size of a WINBOT W1 PRO, drives a Z path over the long table and touches the stapler, the tape measure and the video camera in turn (physics time 14.99, 30.01 and 45.01 s), pushing each off the table edge. Nobody picks them up. The robot keeps its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Each physics step is 1/60 s; about 100 s of simulation at 8x, 12.5 s clip",
-      "renderDateUTC": "2026-11-26"
+      "clock": "Physics at 120 Hz; 55 s self-check, one frame every 16 steps, played at 2x, 27.5 s clip",
+      "renderDateUTC": "2026-11-27"
     }
   ]
 };
