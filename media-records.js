@@ -411,5 +411,19 @@ const recordings = {
       "clock": "Sim clock 120 Hz; 64 s route at 4x, 16 s clip",
       "renderDateUTC": "2026-11-26"
     }
+  ],
+  "N04": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n04-mechanism.mp4",
+      "originalSha256": "667b3b43bb7a66715bdb16d0e72664e056b9279f5dae5d7cc223a762afa9beb3",
+      "publicSha256": "8f2cee7a1b85dcca8d70024b9a5b0001538dcf093a490868903fa636055898a2",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "On the loading spot on the 0.95 degree slope, the released handcart slides 1.69 m in 5 s without a chock and only 0.03 m with the chock under a wheel (the self-check places cart and chock directly). The robot stays at its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Physics clock 120 Hz; real time, 5 s per release, 10 s clip",
+      "renderDateUTC": "2026-11-26"
+    }
   ]
 };
