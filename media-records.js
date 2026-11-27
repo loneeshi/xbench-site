@@ -152,6 +152,18 @@ const recordings = {
   ],
   "N01": [
     {
+      "kind": "teleop",
+      "scope": "full",
+      "file": "media/n01-teleop-mujoco.mp4",
+      "originalSha256": "49bd9c2e7287d5a8b6431a5c8574f87d7787a15da13b57a55c0c5ef1672a9383",
+      "publicSha256": "ebd656424993f3c82cb93162c245422e65ca8679452bb6755f3534d295736564",
+      "label": "Human teleoperation · MuJoCo prototype · RB-Y1 M v1.3",
+      "outcome": "A person teleoperates the robot through the task in the simplified MuJoCo prototype (head camera and top view). Not the Isaac scene; not a model run.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Real time, 1 min 33 s",
+      "renderDateUTC": "2026-11-26"
+    },
+    {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/n01-mechanism.mp4",
@@ -179,6 +191,18 @@ const recordings = {
     }
   ],
   "N03": [
+    {
+      "kind": "teleop",
+      "scope": "full",
+      "file": "media/n03-teleop-mujoco.mp4",
+      "originalSha256": "4b5757f6bfbcfe5f383df03db0c1d8b40783bf27de875398e6033d72b972a16d",
+      "publicSha256": "44cf4c3e6e12f4b26fa7481259ac4b45c2d91ae0220962f919b1772be3c08f09",
+      "label": "Human teleoperation · MuJoCo prototype · RB-Y1 M v1.3",
+      "outcome": "A person teleoperates the robot through the task in the simplified MuJoCo prototype (head camera and top view). Not the Isaac scene; not a model run.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Real time, 1 min 54 s",
+      "renderDateUTC": "2026-11-26"
+    },
     {
       "kind": "mechanism",
       "scope": "full",
