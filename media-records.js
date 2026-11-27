@@ -275,13 +275,13 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/n01-mechanism.mp4",
-      "originalSha256": "1953b253e81a1e3b523b8e668fee0e782e3c6997bb5485560019fb210103e29a",
-      "publicSha256": "302d5daa5b044d60721da6b34ebd36bc66c0f326df394f2a7be5599264e48506",
+      "originalSha256": "08137a7d65fec1acaa4153b1af139f3849c61fa8deec4cfe467bf70bbfc9d043",
+      "publicSha256": "9a20ad7750cf4a1e4dc3c8fbd8116dbc965faac27f61c8f052a08d9db2af2bf5",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The chest-freezer lid is released once from 90° and once from 60°; it falls shut by itself. The robot stays at its start pose.",
+      "outcome": "The chest-freezer lid is released once from 90 deg and once from 60 deg and closes by itself: within 5 deg after 1.81 s and 0.71 s of physics time, stopping within 0.02 deg without bouncing open. Three small YCB packages sit inside. The robot keeps its start pose.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Recorded with the old step bug: physics stepped at 1/60 s while the script counted 1/120 s, so the clip runs at 2x physical time; 6 s per release. With the corrected step the lid no longer falls from 90 deg; damping is being retuned.",
-      "renderDateUTC": "2026-11-26"
+      "clock": "Physics at 1/120 s per step (verified); 6 s per release, one frame every 8 steps at 15 fps, so the clip plays in real physics time; 12 s clip",
+      "renderDateUTC": "2026-11-27"
     }
   ],
   "N02": [
@@ -335,20 +335,6 @@ const recordings = {
       "outcome": "Motorised shutter: one press of the wall button raises it to fully open in about 4 s; it stays open 10 s and lowers by itself; a press while it is coming down sends it back up, and it finally closes. The status light is green while the shutter is not fully closed and red when closed. A lidded saucepan stands on the cart. The robot keeps its start pose.",
       "robotModel": "RB-Y1 M v1.3",
       "clock": "Physics at 120 Hz; 36 s self-check played at 1.5x, 24 s clip",
-      "renderDateUTC": "2026-11-26"
-    }
-  ],
-  "W05": [
-    {
-      "kind": "mechanism",
-      "scope": "full",
-      "file": "media/w05-mechanism.mp4",
-      "originalSha256": "a56ef8c4805bcd6b121aef6cc9ed11c4a4059b61e23d8d893cabf2487c566168",
-      "publicSha256": "8799d4fa3e304f2e76e68d9b33f643033f553519ab82a42a345aa306cb64f30f",
-      "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The tugger runs one loop: it waits 30 s at the stop, leaves, and is back at the stop after about 92 s. The robot stays at its start pose.",
-      "robotModel": "RB-Y1 M v1.3",
-      "clock": "Sim clock 120 Hz; one 92 s loop at 8x, 11.5 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -557,6 +543,20 @@ const recordings = {
       "outcome": "The lift-up wall-cabinet door is released once from 90 deg and once from 100 deg and closes by itself: within 5 deg after 1.31 s and 1.41 s of physics time, stopping at 0.05 deg without bouncing open. The robot keeps its start pose.",
       "robotModel": "RB-Y1 M v1.3",
       "clock": "Physics at 1/120 s per step (verified); 6 s per release, one frame every 8 steps at 15 fps, so the clip plays in real physics time; 12 s clip",
+      "renderDateUTC": "2026-11-27"
+    }
+  ],
+  "W05": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/w05-mechanism.mp4",
+      "originalSha256": "83cd577c228054f8bb63336ab405457ac8499d45dfe7e0e1dfe154fc2ac87dbc",
+      "publicSha256": "9687d254300f23e58437cdfcc488c0b53c4585b3c97f9ec8bb3e121cae2256f0",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "The tugger runs one loop: it leaves after a 30 s stop and returns to the stop after about 92 s. The two toolboxes sit on the pick table and the staging table is clear of the loading stand. The robot keeps its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Physics at 1/120 s per step; one 92 s loop, one frame every 64 steps at 15 fps, so the clip plays at 8x; 11.5 s clip",
       "renderDateUTC": "2026-11-27"
     }
   ]

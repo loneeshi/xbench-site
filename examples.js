@@ -507,7 +507,7 @@ const examples = {
   "W05": {
     "instruction": "Load the two boxes into the inner and outer cargo slots of the tugger trailer.",
     "zh": "把两箱货装到牵引车车厢的内侧货位和外侧货位。",
-    "environment": "A tugger stops briefly each lap. Load the inner slot first, then the outer slot during a stop.",
+    "environment": "Warehouse aisle. A tugger with a trailer loops on a fixed route and stops for 30 s each lap (about 92 s per lap). Two 1 kg toolboxes with upright handles wait on a pick table; a staging table stands 1.1 m from the trailer. Load the inner slot first, then the outer slot during a stop.",
     "success": "Both boxes depart in their assigned slots without the tugger hitting the robot or cargo.",
     "steps": [
       {
@@ -542,7 +542,7 @@ const examples = {
   "N01": {
     "instruction": "Take the blue food container out of the chest freezer and put it on the counter next to the freezer.",
     "zh": "从冷柜取出蓝色食品盒，放到旁边的台面上。",
-    "environment": "Single-wall kitchen with a long chest freezer. The lid falls when released. The robot supports it while moving sideways to reach the container.",
+    "environment": "Single-wall kitchen with a long chest freezer. Three small packages from the YCB set lie on a 0.60 m support inside (target: a pudding box; others: a gelatin box and a sugar box). The lid falls when released: from 90 deg it closes in about 1.8 s of physics time. The robot supports it while moving sideways to reach the target.",
     "success": "The container rests on the counter and the lid is closed. The lid must not strike the arm or the container.",
     "steps": [
       {
@@ -567,7 +567,7 @@ const examples = {
       }
     ],
     "status": "Scene built. The full-scene and head-camera images show the mecanum robot at the start. The package includes the environment and tests. Server integration and an end-to-end pass are pending.",
-    "pending": "Lid mass and counterbalance are estimates. The opening-angle threshold and episode limits are pending.",
+    "pending": "Lid mass, counterbalance and hinge damping are estimates. The lid handle is at 1.50 m at the 60 deg support angle and 1.62 m when fully open. Episode limits are pending.",
     "images": [
       {
         "src": "images/n01-scene.png",
