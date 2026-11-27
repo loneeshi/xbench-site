@@ -50,7 +50,7 @@ const examples = {
     ]
   },
   "O02": {
-    "instruction": "Load the two boxes onto the flat cart and push the cart to the other side of the door. Both boxes must stay on the cart.",
+    "instruction": "Load the two boxes onto the service cart and push the cart to the other side of the door. Both boxes must stay on the cart.",
     "zh": "把两箱货装上平板车，把车推到门的另一侧。两箱货都要留在车上。",
     "environment": "Office corridor with a door closer. Pushing starts the door’s motion. The robot must get through before it closes. The cart is a two-shelf service cart with its top shelf at 0.635 m, so no box sits below 0.6 m.",
     "success": "The cart and both boxes reach the far side of the door without any cargo falling.",
@@ -1095,7 +1095,7 @@ const examples = {
     ]
   },
   "N16": {
-    "instruction": "Carry the long board with the freight vehicle to the unloading point and place it on the rack.",
+    "instruction": "Carry the long board together with the freight vehicle to the unloading point and put it down on the pallets.",
     "zh": "和运货车一起把长板抬到卸货点，放到架子上。",
     "environment": "A tug and the robot move side by side; the long board lies across between them, one end in the tug cradle and the other held by the robot. The tug follows a fixed route at 0.2 m/s with a wide turn; the robot walks on the inner side. At the end the cradle lowers 10 cm and the board settles on a pallet stack 0.75 m high.",
     "success": "The board rests on the pallet stack at the unloading point. It never fell, and the tug never struck the robot.",
