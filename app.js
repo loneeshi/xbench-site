@@ -1,3 +1,10 @@
+const LEGACY_A = ['O01','O02','O03','O04','O05','K02','K05'];
+const LEGACY_PLANAR = ['W01','W02','W03','W04'];
+function robotLine(id) {
+  if (LEGACY_A.includes(id)) return 'Robot: the scene is being moved to RB-Y1 M v1.3 (mecanum base, running clock). Recorded scripted demos used the two-wheel RB-Y1 A with a paused clock.';
+  if (LEGACY_PLANAR.includes(id)) return 'Robot: the scene is being moved to RB-Y1 M v1.3 (mecanum base, running clock). Recorded scripted demos used a virtual planar base.';
+  return 'Robot: RB-Y1 M v1.3, mecanum base, continuously running clock.';
+}
 'use strict';
 const byId = id => document.getElementById(id);
 const escapeText = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -53,7 +60,7 @@ function profileView() {
   byId('profile').innerHTML=`<a class="back" href="index.html#catalogue">Task catalogue</a>
     <div class="intro"><div><p class="eyebrow">${e(id)} &nbsp; / &nbsp; ${e(task.scene)}</p><h1>${e(task.title)}</h1><p class="tags">${e(task.dynamic)} &nbsp;·&nbsp; ${e(task.efficiency)}</p></div>
     <div><h2>Instruction</h2><p class="instruction">${e(p.instruction)}</p></div></div>
-    <section><h2>Environment</h2><p>${e(p.environment)}</p><p>Target configuration: RB-Y1 M v1.3, mecanum base, continuously running clock. The current engineering package specifies the two-wheel RB-Y1 A.</p></section>
+    <section><h2>Environment</h2><p>${e(p.environment)}</p><p>${e(robotLine(id))}</p></section>
     <section><h2>Tests</h2><p>${e(p.success)}</p><ol class="steps">${p.steps.map(s=>`<li><strong>${s.points} points</strong><span>${s.timing?'<b class="timing">Timing milestone</b> ':''}${e(s.criterion)}</span></li>`).join('')}</ol></section>
     <section><h2>Status</h2><p>${e(p.status)}</p><p>${e(p.pending)}</p></section><section><h2>Media</h2><div class="gallery">${media}</div></section>`;
 }
