@@ -8,6 +8,18 @@ const recordings = {
       "publicSha256": "1473783f407cac002fc60abf9506398f32c81cdaa78adff64f057a00c93123cf",
       "label": "Scripted · two-wheel RB-Y1 A · paused clock",
       "outcome": "Old A04 procedure. The recording does not demonstrate the revised swap with a self-closing door."
+    },
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/k03-mechanism.mp4",
+      "originalSha256": "938756d6744c44141d94dad9176050d5b8f82024eef29e298ffa52ad58ba0fde",
+      "publicSha256": "984dac36809123d39869df3f53f84c74ff259a6c820bf78c5acdb6e32aa89602",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "Both doors of the self-closing fridge are opened to their stop (door 1 at 110 deg; door 2 reads 99.8 deg one step after being set to 110 deg, probably against the side wall) and released together, then released together from 60 deg. Each closes by itself: within 5 deg after 6.01 s and 5.61 s from the stop and 4.61 s and 4.46 s from 60 deg of physics time, stopping at 0 deg without bouncing open. The bottle in the fridge, the cup on the counter and the saucer on the placemat stay put. The robot keeps its start pose.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Physics at 1/120 s per step (verified); 9 s per release, one frame every 8 steps at 15 fps, so the clip plays in real physics time; 18 s clip",
+      "renderDateUTC": "2026-11-27"
     }
   ],
   "O02": [
