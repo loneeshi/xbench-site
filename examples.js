@@ -1,43 +1,38 @@
 const examples = {
   "O01": {
-    "instruction": "Take the cart of goods and the large item to the floor named in GET /task. The cart, the item and the robot must all end outside the elevator on that floor, and no goods may fall.",
-    "zh": "把一车货和一件大件送到指定的楼层。",
-    "environment": "The elevator can be called again, but the robot must finish boarding before the doors close.",
-    "success": "The robot, cart and large item are outside the elevator on the requested floor, with no cargo lost.",
+    "instruction": "Take the loaded cart in front of you and the blue box with a carry handle behind you on your left into the elevator, and send the elevator to the floor named in GET /task. The cart, the box and the robot must all be inside when the elevator leaves, and no goods may fall.",
+    "zh": "把你前面装着货的推车，和你左后方带提手的蓝色箱子，一起送进电梯，让电梯去 GET /task 里写的楼层。电梯离开时，推车、箱子和机器人都要在电梯里，货不能掉。",
+    "environment": "The elevator can be called again, but the robot must finish boarding before the doors close. The scene has one floor, so the episode ends when the elevator leaves.",
+    "success": "When the elevator leaves, the robot, the cart with both boxes and the large item are inside, the target-floor button is lit and no cargo has fallen.",
     "steps": [
       {
         "criterion": "The call button lights up.",
-        "points": 17,
+        "points": 20,
         "timing": false
       },
       {
-        "criterion": "Move the large item into the marked waiting area.",
-        "points": 17,
+        "criterion": "The large item rests wholly inside the green area in front of the doors.",
+        "points": 20,
         "timing": false
       },
       {
-        "criterion": "Bring the entire cart onto the cabin floor.",
-        "points": 17,
+        "criterion": "The entire cart is on the cabin floor, inside the car doors.",
+        "points": 20,
         "timing": false
       },
       {
-        "criterion": "When the elevator leaves, the cart, large item and robot must all be inside. Measure the time from the last entry until closing begins.",
-        "points": 17,
+        "criterion": "When the car doors close at this floor, the cart, both boxes, the large item and the robot are all inside and nothing has fallen. Pressing the floor button is not required for this step.",
+        "points": 20,
         "timing": true
       },
       {
         "criterion": "The target-floor button lights up.",
-        "points": 16,
-        "timing": false
-      },
-      {
-        "criterion": "At the target floor, all three are in the lobby and no cargo has fallen.",
-        "points": 16,
+        "points": 20,
         "timing": false
       }
     ],
-    "status": "Scene and Harbor package are present. The legacy scripted record establishes joint departure. Arrival and unloading on the target floor remain unverified. Earlier Harbor trials ran with zero reward for both reference and no-op runs. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Episode time and step limits are pending.",
+    "status": "Scene and Harbor package are present. Reviewed on 2026-11-27: the episode now ends at departure and all five milestones are judged (xbench-sim#49), not yet checked in a simulator run. The legacy scripted record establishes joint departure. No end-to-end pass is recorded under the current robot and clock rules.",
+    "pending": "Episode time and step limits are pending. The 180 s door dwell is to be reset.",
     "images": [
       {
         "src": "images/o01-scene.jpg",
