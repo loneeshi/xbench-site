@@ -32,7 +32,7 @@ const examples = {
       }
     ],
     "status": "Scene and Harbor package are present. Reviewed on 2026-11-27: the episode now ends at departure and all five milestones are judged (xbench-sim#49), not yet checked in a simulator run. The legacy scripted record establishes joint departure. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Episode time and step limits are pending. The 180 s door dwell is to be reset.",
+    "pending": "Episode time and step limits are pending. Elevator timing (estimates): doors stay open 65 s, close slowly after 20 s of blocking, and another floor calls the car 300 s after the first hall call.",
     "images": [
       {
         "src": "images/o01-scene.jpg",
@@ -51,17 +51,17 @@ const examples = {
     "success": "The cart and both boxes reach the far side of the door without any cargo falling.",
     "steps": [
       {
-        "criterion": "Load both boxes. They must be at rest inside the cart deck boundary.",
+        "criterion": "Load both boxes. Each box rests on the deck, upright and still, with its centre inside the deck; a few millimetres of overhang are allowed.",
         "points": 25,
         "timing": false
       },
       {
-        "criterion": "Move the front of the cart into the approach region by the door.",
+        "criterion": "Park the cart with its front edge within 1.2 m in front of the door, on the cart lane.",
         "points": 25,
         "timing": false
       },
       {
-        "criterion": "Push the door to an angle that allows the cart through. The numeric threshold is pending.",
+        "criterion": "Push the door open to at least 60 degrees, where the cart fits through.",
         "points": 25,
         "timing": false
       },
@@ -71,8 +71,8 @@ const examples = {
         "timing": true
       }
     ],
-    "status": "Scene built on RB-Y1 M v1.3 with the boxes on the near table (2026-11-27). The Harbor package starts with a running clock and 1/120 s physics. The old scripted solution (two-wheel robot, boxes on the reception desk) no longer applies and its video was removed. A successful end-to-end run under the current rules is pending.",
-    "pending": "The passable door angle and episode limits are pending.",
+    "status": "Scene built on RB-Y1 M v1.3 with the boxes on the near table (2026-11-27). The Harbor package starts with a running clock and 1/120 s physics. The old scripted solution (two-wheel robot, boxes on the reception desk) no longer applies and its video was removed. All four milestones are judged during the episode (2026-11-27, xbench-sim#53). A successful end-to-end run under the current rules is pending.",
+    "pending": "Episode limits are pending. The door closes at 0.5 degrees per second at every angle (estimate from an archived run, much slower than real closers); force and contact judging is set after all 30 tasks are reviewed.",
     "images": [
       {
         "src": "images/o02-scene.jpg",
