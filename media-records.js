@@ -1,27 +1,4 @@
 const recordings = {
-  "K03": [
-    {
-      "kind": "scripted",
-      "scope": "old-design",
-      "file": "media/k03-old-flow.mp4",
-      "originalSha256": "a23a25c09e4e45e4119730f7e6789142a2b2f165973078ffecca0a892861d6ff",
-      "publicSha256": "1473783f407cac002fc60abf9506398f32c81cdaa78adff64f057a00c93123cf",
-      "label": "Scripted · two-wheel RB-Y1 A · paused clock",
-      "outcome": "Old A04 procedure. The recording does not demonstrate the revised swap with a self-closing door."
-    },
-    {
-      "kind": "mechanism",
-      "scope": "full",
-      "file": "media/k03-mechanism.mp4",
-      "originalSha256": "938756d6744c44141d94dad9176050d5b8f82024eef29e298ffa52ad58ba0fde",
-      "publicSha256": "984dac36809123d39869df3f53f84c74ff259a6c820bf78c5acdb6e32aa89602",
-      "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "Both doors of the self-closing fridge are opened to their stop (door 1 at 110 deg; door 2 reads 99.8 deg one step after being set to 110 deg, probably against the side wall) and released together, then released together from 60 deg. Each closes by itself: within 5 deg after 6.01 s and 5.61 s from the stop and 4.61 s and 4.46 s from 60 deg of physics time, stopping at 0 deg without bouncing open. The bottle in the fridge, the cup on the counter and the saucer on the placemat stay put. The robot keeps its start pose.",
-      "robotModel": "RB-Y1 M v1.3",
-      "clock": "Physics at 1/120 s per step (verified); 9 s per release, one frame every 8 steps at 15 fps, so the clip plays in real physics time; 18 s clip",
-      "renderDateUTC": "2026-11-27"
-    }
-  ],
   "O02": [
     {
       "kind": "mechanism",
@@ -397,20 +374,6 @@ const recordings = {
       "renderDateUTC": "2026-11-26"
     }
   ],
-  "N15": [
-    {
-      "kind": "mechanism",
-      "scope": "full",
-      "file": "media/n15-mechanism.mp4",
-      "originalSha256": "05c74a34a652eaff9ab2e0c1f1b4ecdf7edaa25126ae749192a632e513129970",
-      "publicSha256": "140cb3078016c719fe2cb9702fb066f66a3d6ea9a53ad17650b4fb073dbfc85b",
-      "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The loaded handcart rolls down the 1.5% slope by itself; its front crosses the stop line at 16.2 s and the box stays on the cart. The robot stays at its start pose.",
-      "robotModel": "RB-Y1 M v1.3",
-      "clock": "Sim clock 120 Hz; real time, 16.2 s clip",
-      "renderDateUTC": "2026-11-26"
-    }
-  ],
   "O05": [
     {
       "kind": "teleop",
@@ -434,20 +397,6 @@ const recordings = {
       "outcome": "The elevator comes down from floor 7, the doors open, stay fully open for 8 s (a demo value), close, and the car is then called to another floor. The robot stays at its start pose.",
       "robotModel": "RB-Y1 M v1.3",
       "clock": "Sim clock 120 Hz; real time, 26.5 s clip",
-      "renderDateUTC": "2026-11-26"
-    }
-  ],
-  "N07": [
-    {
-      "kind": "mechanism",
-      "scope": "full",
-      "file": "media/n07-mechanism.mp4",
-      "originalSha256": "895d60b42ce31605f44504666eb6eaf9baf4b85d4a9763b7b2d07a12a86c5022",
-      "publicSha256": "56be63434cd51cdeb1609c5536e381fffb946f28bf18a2f41b2c92c7622119d8",
-      "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The turntable turns steadily at 6°/s and the three jars ride one full turn. The robot stays at its start pose.",
-      "robotModel": "RB-Y1 M v1.3",
-      "clock": "Sim clock 120 Hz; 60 s at 2.5x, 24 s clip",
       "renderDateUTC": "2026-11-26"
     }
   ],
@@ -535,32 +484,74 @@ const recordings = {
       "renderDateUTC": "2026-11-27"
     }
   ],
-  "N04": [
+  "N17": [
     {
       "kind": "mechanism",
       "scope": "full",
-      "file": "media/n04-mechanism.mp4",
-      "originalSha256": "4ac61eca56bad224318bc1bef8e132793fb2fe52f5ec838e9282e223154fd9dd",
-      "publicSha256": "0839671430a80a0319f4b57fff3cf400a19c9421fd0f10fbd69af43e007181d2",
+      "file": "media/n17-mechanism.mp4",
+      "originalSha256": "d5ef51e9c4770eb99d9a51d040c4cdeea1c8fa647bc21e26e2fa161350c3443a",
+      "publicSha256": "ce21aee3f45e29e250c6502ce52d28452cb854e287e2526cc105af0d437b12d6",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "Self-check; the robot keeps its start pose. 0-2 s: the empty N10 cart stands on the flat floor at the foot of the ramp and the red toolbox on the table; nothing moves. 2-7 s: the self-check sets the empty cart in the yellow loading zone on the 0.95 deg ramp and lets go: it rolls back 1.40 m. 7-13 s: the cart is set in the zone again and an evaluation-side hold rig (a spring on the push bar, about 1.07 N) holds it; the self-check puts the toolbox on the top shelf (no hand does this). The cart moves 2.9 mm and the toolbox comes to rest. 13-18 s: the rig lets go and the loaded cart rolls back 1.48 m with the toolbox.",
+      "outcome": "Self-check; the robot keeps its start pose. Seed 17, speed 0.248 m/s. 0-20 s: the tugger wanders on its seeded random walk. 20-32 s: the self-check sends it straight at the standing robot (only to check the judge); the evaluation side records the contact at 23.0 s. 32 s: it is back on its walk. About 40 s: a thin self-check rod (not the robot) presses the e-stop from above; it stops 0.31 s later and stays stopped until the end at 50 s.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Physics at 120 Hz; 18 s self-check, one frame every 8 steps, played at 1x, 18 s clip; main view the loading zone, top-right inset the whole scene",
-      "renderDateUTC": "2026-11-27"
+      "clock": "Physics at 120 Hz; 50 s self-check, one frame every 16 steps, played at 2.0x, 25.0 s clip",
+      "renderDateUTC": "2026-11-28"
     }
   ],
-  "K04": [
+  "N18": [
     {
       "kind": "mechanism",
       "scope": "full",
-      "file": "media/k04-mechanism.mp4",
-      "originalSha256": "9e21e2d7af5f1afd05f6eade2f20edfdce49376fb02bda464728adef86fb2ec3",
-      "publicSha256": "9593d6f0178e746a73c8a388351230f0aab8271758e5c68079cf60cea3b36e0c",
+      "file": "media/n18-mechanism.mp4",
+      "originalSha256": "c2dbb5f48aa01ac5e162b4cdd40e72a3fa1575c58e0b4761499792d29897827f",
+      "publicSha256": "4cb9581d227de068b4359e9960daecd3ff52f3280a8ebef6565e678c3b726aae",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The lift-up wall-cabinet door is released once from its 46 deg stop and once from 40 deg and closes by itself: within 5 deg after 0.91 s and 0.86 s of physics time, stopping at 0.04 deg without bouncing open. The cabinet hangs at 1.28 m with a 46 deg opening stop, and the cup, plate and bowl stand on a raised rack at 0.70 m in the dishwasher. The robot keeps its start pose.",
+      "outcome": "Self-check; the robot keeps its start pose. Seed 18, speed 0.221 m/s. 0-20 s: the serving robot wanders on its seeded random walk. 20-32 s: the self-check sends it straight at the standing robot (only to check the judge); the evaluation side records the contact at 23.6 s. 32 s: it is back on its walk. About 40 s: a thin self-check rod (not the robot) presses the e-stop from above; it stops 0.31 s later and stays stopped until the end at 50 s.",
       "robotModel": "RB-Y1 M v1.3",
-      "clock": "Physics at 1/120 s per step (verified); 6 s per release, one frame every 8 steps at 15 fps, so the clip plays in real physics time; 12 s clip",
-      "renderDateUTC": "2026-11-27"
+      "clock": "Physics at 120 Hz; 50 s self-check, one frame every 15 steps, played at 1.9x, 26.7 s clip",
+      "renderDateUTC": "2026-11-28"
+    }
+  ],
+  "N19": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n19-mechanism.mp4",
+      "originalSha256": "d2aa0fbb6d7d048e4e8a56f7e160d66190482f1b8ae8740831da599e7308872e",
+      "publicSha256": "2a24835e7c4d2ab21e00cb364f755aff9f33d95084cd20eb2f5dbdfb2d183c5f",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "Self-check; the robot keeps its start pose. Seed 19, speed 0.189 m/s. 0-20 s: the transfer AGV wanders on its seeded random walk. 20-32 s: the self-check sends it straight at the standing robot (only to check the judge); the evaluation side records the contact at 29.6 s. 32 s: it is back on its walk. About 40 s: a thin self-check rod (not the robot) presses the e-stop from above; it stops 0.31 s later and stays stopped until the end at 50 s.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Physics at 120 Hz; 50 s self-check, one frame every 15 steps, played at 1.9x, 26.7 s clip",
+      "renderDateUTC": "2026-11-28"
+    }
+  ],
+  "N20": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n20-mechanism.mp4",
+      "originalSha256": "78ba7cd46ea6b5520e9aa4b7948c189befd04a8cb1cccd101973cfde298b03d7",
+      "publicSha256": "6b1eaf5a5ed14d35e2387bab0c1942c18936023757eafe74dd38de0ceecd308f",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "A test fixture presents the card twice. The first read fails and the second opens the gate. The robot stays still.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Running simulation clock. Thirteen simulated seconds shown at real-time playback.",
+      "renderDateUTC": "2026-11-28"
+    }
+  ],
+  "N21": [
+    {
+      "kind": "mechanism",
+      "scope": "full",
+      "file": "media/n21-mechanism.mp4",
+      "originalSha256": "007f98a2043963973ce91d4eaf63f523ab474e3f7ad830dd048a35a63755e7f9",
+      "publicSha256": "d89e1648d47d63ff7a8feb487a0a096df96e108fc580b6d87548f93869f75acc",
+      "label": "Mechanism demo · robot stays still · not a solution",
+      "outcome": "Self-check with seed 9; the robot keeps its start pose. The carriers move past the service window at 0.05 m/s, each with one item on its shelf at 1.00 m. Nobody takes the named item, so it passes the right edge of the window and the evaluation side records it as missed. Items are loaded and unloaded behind the wall, out of view.",
+      "robotModel": "RB-Y1 M v1.3",
+      "clock": "Physics at 120 Hz; 20.2 s clip at 10 fps",
+      "renderDateUTC": "2026-11-28"
     }
   ]
 };
