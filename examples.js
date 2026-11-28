@@ -85,34 +85,34 @@ const examples = {
     ]
   },
   "O03": {
-    "instruction": "Deliver the parcel to the delivery vehicle.",
-    "zh": "把包裹交给配送车。",
-    "environment": "The delivery vehicle leaves its office stop once. Move the chair and reach the stop before departure.",
-    "success": "The parcel is in the vehicle’s cargo compartment.",
+    "instruction": "Move the chair clear of the marked path and load the parcel from the desk into the upper compartment of the delivery vehicle at the stop beside the row of desks.",
+    "zh": "把椅子移出标出的通道，将桌上的包裹放进停在这排办公桌旁的配送车上层货仓。",
+    "environment": "Open-plan office. A delivery vehicle stops beside the row of desks, about 3.4 m from the start and visible from it, then leaves once and does not return. A chair blocks the way back from the desk, and the parcel has a carry bar across its top, so one hand can lift it.",
+    "success": "The chair is out of the marked path and the parcel rests in the upper compartment of the delivery vehicle.",
     "steps": [
       {
-        "criterion": "Move the chair out of the marked route.",
+        "criterion": "The chair and all five casters are out of the marked path.",
         "points": 25,
         "timing": false
       },
       {
-        "criterion": "Grasp the parcel and lift it from its starting position.",
+        "criterion": "The parcel is lifted at least 2 cm above the desk and held at its carry bar.",
         "points": 25,
         "timing": false
       },
       {
-        "criterion": "Reach the stop with the parcel before the vehicle moves. Record arrival-to-departure time.",
+        "criterion": "When the vehicle starts to leave, the robot and the parcel are both inside the stop area. Record time from arrival until departure.",
         "points": 25,
         "timing": true
       },
       {
-        "criterion": "Leave the parcel at rest inside the cargo compartment.",
+        "criterion": "The whole parcel, carry bar included, is inside the upper compartment and stays still for 0.5 s.",
         "points": 25,
         "timing": false
       }
     ],
-    "status": "Scene and Harbor package are present. The recording is labelled successful, but the registry accepts only segments because the full episode record is missing. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Episode time and step limits are pending.",
+    "status": "Scene, Harbor package and live milestone judges are present (xbench-sim#66). A no-op run from the official start covers arrival, doors and departure, and a one-hand lift and turn with the parcel worked. No scripted run has loaded the parcel yet. Reviewed and merged on 2026-11-28; offline checks only.",
+    "pending": "Departure at 170 s is an estimate. Episode time and step limits are pending.",
     "images": [
       {
         "src": "images/o03-scene.jpg",
@@ -125,29 +125,29 @@ const examples = {
     ]
   },
   "O04": {
-    "instruction": "Unload the cargo from the cart at the designated location in the corridor.",
-    "zh": "把车上的货卸到走廊的指定位置。",
-    "environment": "A warning precedes a one-off fire-door closure in the corridor. The cart is a two-shelf service cart (top shelf 0.635 m); the boxes are unloaded onto a folding table (0.737 m) against the corridor wall.",
-    "success": "After the warning, clear the cart and boxes before the fire door closes. Park the cart and robot in the bay.",
+    "instruction": "Push the service cart beside you in the corridor into the marked parking bay beyond the doorway, keeping the boxes on the cart, and stop outside with it.",
+    "zh": "把走廊里你身旁的服务车推到门外有标线的停靠区，让箱子留在车上，然后和车一起停在门外。",
+    "environment": "Office corridor with a double fire door. A red lamp beside the door is lit at the start; after a set time it starts to strobe, the doors release and close at a constant rate, and they lock once shut. The service cart (top shelf 0.635 m) carries two boxes, and the parking bay is a floor marking beyond the doorway.",
+    "success": "The cart with both boxes and the robot are stopped in the parking bay beyond the doorway, and no box has fallen.",
     "steps": [
       {
-        "criterion": "Leave the box stationary on the unloading table.",
+        "criterion": "The cart has moved at least 0.3 m toward the door.",
         "points": 33,
         "timing": false
       },
       {
-        "criterion": "When closing begins, the aisle must be clear of the cart and boxes. Record time from clearance to closure onset.",
+        "criterion": "When the doors first close fully, the cart, both boxes and the robot base are entirely beyond the door plane. Record time from the last one crossing until the doors close.",
         "points": 33,
         "timing": true
       },
       {
-        "criterion": "Move both robot and cart inside the parking bay.",
+        "criterion": "The cart centre is inside the parking bay, the robot is outside the door, both boxes are still on the cart, and all stay still for 0.5 s.",
         "points": 34,
         "timing": false
       }
     ],
-    "status": "Scene and Harbor package are present. The recorded forward, retreat and no-warning segments cover an earlier procedure. The current unloading and evacuation sequence still needs a full run. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Episode time and step limits are pending.",
+    "status": "Reworked on 2026-11-27: the cart is pushed out through the closing fire door to the parking bay outside (xbench-sim#67). A no-op run scores 0/100 as expected. Scripted cart grasps have not succeeded yet, so no successful push run exists. Reviewed and merged on 2026-11-28; offline checks only.",
+    "pending": "The 32 s warning and 1 deg/s closing speed are estimates. Episode time and step limits are pending.",
     "images": [
       {
         "src": "images/o04-scene.jpg",
@@ -160,29 +160,29 @@ const examples = {
     ]
   },
   "O05": {
-    "instruction": "Remove the loaded cart and the large item from the arriving elevator.",
-    "zh": "把电梯送上来的一车货和一件大件接出来。",
-    "environment": "Clear the elevator lobby and remove both items before the elevator leaves. The elevator can be called again.",
-    "success": "The cart and the large item are both outside the elevator.",
+    "instruction": "Move the sign and empty cart clear of the elevator entrance, keeping the sign upright, and bring the loaded cart with its boxes and the large blue box from inside the elevator to their marked spaces in the lobby.",
+    "zh": "把告示牌和空车挪出电梯门前的通道，保持告示牌直立，并把轿厢里的载货车连同车上的货箱、以及蓝色大箱子分别放到大厅里对应的标记区。",
+    "environment": "Elevator lobby on an office floor. The car arrives with a loaded cart and a large blue box with a carry bar (one hand can lift it), while a sign and an empty cart block the entrance. The doors stay open 65 s and close slowly after 20 s of blocking; the car can be called again, but another floor later calls it away.",
+    "success": "The sign stands upright and, with the empty cart, is clear of the entrance; the loaded cart with its boxes and the large blue box are out of the elevator in their marked spaces.",
     "steps": [
       {
-        "criterion": "Move the sign and empty cart out of the area in front of the doors.",
+        "criterion": "The sign and the empty cart are both out of the area in front of the doors, and the sign stands upright.",
         "points": 33,
         "timing": false
       },
       {
-        "criterion": "Bring either the loaded cart or the large item fully outside.",
+        "criterion": "Either the loaded cart or the large blue box is entirely outside the elevator.",
         "points": 33,
         "timing": false
       },
       {
-        "criterion": "Bring the other item outside before closing starts. Record the time remaining.",
+        "criterion": "When the doors start their last closing before the car leaves, the cart, both boxes on it and the large blue box are all outside. Record time from the last item coming out until the doors start closing.",
         "points": 34,
         "timing": true
       }
     ],
-    "status": "Scene and Harbor package are present. The elevator scene exists. No accepted full run is recorded. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Episode time and step limits are pending.",
+    "status": "Scene, Harbor package and live judges are present (xbench-sim#68). The large item is the carry-bar box from O01. A paired good-order and poor-order run in the new scene is pending. Reviewed and merged on 2026-11-28; offline checks only.",
+    "pending": "Arrival at 260 s and the other-floor call 360 s after arrival are estimates. Episode time and step limits are pending.",
     "images": [
       {
         "src": "images/o05-scene.jpg",
@@ -195,33 +195,28 @@ const examples = {
     ]
   },
   "K02": {
-    "instruction": "Bring the two drinks and the dish to the dining table. Nothing may spill or fall.",
-    "zh": "把饮料和一盘菜端上餐桌。",
-    "environment": "The floor scrubber wets the kitchen aisle as it passes. Cross before that part of the floor becomes wet.",
-    "success": "The drinks and dish are on the dining table with nothing spilled or dropped.",
+    "instruction": "Place the dish and both drinks from the starting counter onto the tray, then carry the loaded tray to the brown table at the far end of the room. Leave the loaded tray resting on the table and release it. Keep the tray and its contents off the floor.",
+    "zh": "把起点台面上的菜和两杯饮料装盘，端到房间远端的棕色桌上。把托盘放稳并松手。保持托盘和盘内物品离地。",
+    "environment": "L-shaped kitchen. A floor scrubber moves along the aisle between the starting counter and the brown table, and the floor it passes stays wet. Driving onto wet floor, touching the scrubber or dropping anything ends the episode; earned points are kept.",
+    "success": "The tray with the dish and both drinks rests on the brown table at the far end, released by the robot, and nothing has touched the floor.",
     "steps": [
       {
         "criterion": "Place one dish and two drinks on the tray.",
-        "points": 25,
+        "points": 20,
         "timing": false
       },
       {
-        "criterion": "Carry the tray across the far boundary without driving onto wet floor or touching the scrubber. Keep all items tilted less than 15°. Record time until this section becomes wet.",
-        "points": 25,
+        "criterion": "Carry the tray across the far boundary without driving onto wet floor or touching the floor scrubber. Keep all items stable, with nothing spilled or dropped. Record time until this section becomes wet.",
+        "points": 60,
         "timing": true
       },
       {
-        "criterion": "Move the chair out of the placement area.",
-        "points": 25,
-        "timing": false
-      },
-      {
-        "criterion": "Place all three items in the table’s target area, each tilted less than 10°.",
-        "points": 25,
+        "criterion": "Place the dish and both drinks stably in the target area on the brown table at the far end of the room.",
+        "points": 20,
         "timing": false
       }
     ],
-    "status": "Scene and Harbor package are present.  Earlier Harbor trials ran with zero reward for both reference and no-op runs. No end-to-end pass is recorded under the current robot and clock rules.",
+    "status": "Reviewed rubric with the chair milestone removed; Harbor package present (xbench-sim#65). Reviewed and merged on 2026-11-28; offline checks only.",
     "pending": "Episode time and step limits are pending.",
     "images": [
       {
@@ -235,33 +230,33 @@ const examples = {
     ]
   },
   "K03": {
-    "instruction": "Swap the bottle inside the fridge with the cup outside it, then close the fridge door. Both items must end upright.",
-    "zh": "交换冰箱里的瓶子和外面的杯子，让两件物品保持直立，再关上冰箱门。",
-    "environment": "Single-wall kitchen with a French-door fridge whose doors close by themselves from any opening angle, like a commercial display fridge (from the stop in about 6 s, from 60 deg in about 4.5 s of physics time). The bottle stands on a fridge shelf and the cup on a cork pad on the counter; hand points are 0.89-1.40 m. The robot holds a door open while swapping the items.",
-    "success": "The bottle and cup are upright in their exchanged locations. The fridge is closed and the door has not trapped an arm or either item.",
+    "instruction": "Swap the bottle on the fridge shelf with the cup on the counter to the right of the sink, then close both fridge doors. Leave both items upright and stable in their exchanged locations.",
+    "zh": "交换冰箱搁板上的瓶子和水槽右侧台面上的杯子，再关上两扇冰箱门。让两件物品在交换后的位置直立放稳。",
+    "environment": "Single-wall kitchen with a French-door fridge whose doors close by themselves from any opening angle, like a commercial display fridge (from the stop in about 6 s, from 60° in about 4.5 s; estimate). The bottle stands on a fridge shelf, the cup on the counter right of the sink, and a plate occupies the marked temporary space; hand points are 0.89–1.40 m. Holding a door open is not required; holding time is only recorded.",
+    "success": "The bottle rests upright on the counter in the cup’s starting region and the cup rests upright on the fridge shelf in the bottle’s starting region, without robot support. Both fridge doors are closed and released, and no item or the plate has touched the floor.",
     "steps": [
       {
-        "criterion": "Clear all other objects from the marked temporary space on the counter.",
-        "points": 25,
+        "criterion": "Before completing the exchange, clear the marked temporary space by moving the occupying plate onto another counter surface and releasing it. Keep the space clear and the plate stable for 0.5 seconds.",
+        "points": 20,
         "timing": false
       },
       {
-        "criterion": "Open the fridge door to at least 60°.",
-        "points": 25,
+        "criterion": "Open either fridge door to at least 60°.",
+        "points": 20,
         "timing": false
       },
       {
-        "criterion": "Keep the door supported while swapping both objects into each other’s starting regions. Both must be upright and clear of the door. Record total support time.",
-        "points": 25,
-        "timing": true
+        "criterion": "Exchange the bottle and cup into each other’s starting regions. Leave both upright, supported by the counter or fridge shelf, with all robot contact released, and stable for one second.",
+        "points": 40,
+        "timing": false
       },
       {
-        "criterion": "After withdrawing the arm, close the door to within 5° with the arm outside the gap.",
-        "points": 25,
+        "criterion": "After completing the exchange, leave both fridge doors within 5° of closed, with all robot contact with the doors released, and stable for one second. Both items must remain upright, supported, and released in their exchanged locations.",
+        "points": 20,
         "timing": false
       }
     ],
-    "status": "Scene checked on 2026-11-27 under the 1/120 s physics step, with a new mechanism video. Server integration and a full run of the revised design are pending. The older scripted recording shows a different procedure.",
+    "status": "Scene checked on 2026-11-27 under the 1/120 s physics step. Holding the door is no longer required; holding time is only recorded. Wired into Harbor (xbench-sim#65). A full run of the revised design is pending. Reviewed and merged on 2026-11-28; offline checks only.",
     "pending": "Door closing time is an estimate (no product specification found). Episode limits are pending.",
     "images": [
       {
@@ -355,28 +350,28 @@ const examples = {
     ]
   },
   "W01": {
-    "instruction": "Deliver the box to the pallet on the other side of the aisle.",
-    "zh": "把一箱货送到通道对面的托盘上。",
-    "environment": "A forklift repeatedly crosses the aisle. Carry the box through a gap in traffic.",
-    "success": "The box rests on the far pallet. The forklift has not touched the robot or box.",
+    "instruction": "Carry the red toolbox from the shelf in front of you to the pallet across the aisle without setting it down along the way, then release it and leave it resting on the pallet. Neither the robot nor the toolbox may touch the forklift, and the toolbox must not fall onto the floor.",
+    "zh": "把你面前货架上的红色工具箱搬到通道对面的托盘上，途中不要放下，然后松手，让它留在托盘上。机器人和工具箱都不能碰到叉车，工具箱不能掉到地上。",
+    "environment": "Warehouse aisle. A forklift drives back and forth along the aisle between the shelf and the destination pallet; a missed gap can be waited out. Touching the forklift, setting the toolbox down on the way, losing the grasp or dropping it ends the episode; earned points are kept.",
+    "success": "The toolbox rests stably on the destination pallet without robot support. It has not been set down elsewhere during transport. Neither the robot nor the toolbox has touched the forklift, and the toolbox has not touched the floor.",
     "steps": [
       {
-        "criterion": "Grasp the box and lift it while remaining outside the aisle boundary.",
-        "points": 33,
+        "criterion": "Lift the toolbox clear of the shelf and maintain a physical grasp for 0.5 seconds, with the entire robot and toolbox outside the forklift travel area.",
+        "points": 20,
         "timing": false
       },
       {
-        "criterion": "Move the entire robot and box to the far side without forklift contact. Measure time until the next forklift pass.",
-        "points": 33,
+        "criterion": "Move the entire robot and toolbox to the far side of the aisle without forklift contact.",
+        "points": 60,
         "timing": true
       },
       {
-        "criterion": "Leave the box at rest on the pallet.",
-        "points": 34,
+        "criterion": "Leave the toolbox supported by the destination pallet, with all robot contact released, and stable for one second. Minor edge or handle overhang is allowed; precise centering and an upright orientation are not required.",
+        "points": 20,
         "timing": false
       }
     ],
-    "status": "Scene and Harbor package are present. Earlier scripted comparisons include a forklift-contact failure and a successful delivery. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
+    "status": "Reviewed rubric and Harbor package (xbench-sim#70). Earlier scripted comparisons include a forklift-contact failure and a successful delivery. Reviewed and merged on 2026-11-28; offline checks only.",
     "pending": "Episode time and step limits are pending.",
     "images": [
       {
@@ -390,38 +385,38 @@ const examples = {
     ]
   },
   "W02": {
-    "instruction": "Fill both drums to the required level and move them to the storage area. No material may spill.",
-    "zh": "把两个料桶接到规定的料位，搬到存放区。",
-    "environment": "The robot starts the dispenser. Stop filling the second drum before it overflows.",
-    "success": "Both drums are at the required fill level and in storage, with no spill.",
+    "instruction": "Fill both buckets at the dispenser to at least the marked minimum level. Leave them upright and stable on the storage pallets with the dispenser switched off.",
+    "zh": "在出料口把两个料桶都接到标出的最低料位以上。关掉出料口，让两个桶直立、放稳在存放托盘上。",
+    "environment": "Warehouse filling station on a 0.62 m stand. Pressing the dispenser button starts the flow and pressing it again stops it; while it flows the level keeps rising, and a bucket overflows past its upper limit. Overflow forfeits that milestone and overall success but does not end the episode; a bucket touching the floor does.",
+    "success": "Both buckets hold at least 2 L and rest upright and stable in their storage regions without robot support. The dispenser is switched off, no bucket has touched the floor, and the first bucket was stored while the second was receiving material.",
     "steps": [
       {
-        "criterion": "Fill the first drum to the specified range.",
+        "criterion": "Fill the first bucket to at least 2 L and stop dispensing without overflowing it.",
         "points": 20,
         "timing": false
       },
       {
-        "criterion": "Place the second drum under the outlet.",
+        "criterion": "After the first fill stops, place the second bucket under the outlet and have it actually receive material.",
         "points": 20,
         "timing": false
       },
       {
-        "criterion": "Leave the first drum upright in storage.",
+        "criterion": "After the second bucket starts receiving material, leave the first bucket upright and stable in its storage region, released, for one second. The second bucket must keep receiving material until then.",
         "points": 20,
         "timing": false
       },
       {
-        "criterion": "Stop flow before the second drum exceeds its upper limit. Record the time margin to overflow.",
+        "criterion": "Stop dispensing into the second bucket after it holds at least 2 L and before it overflows. Record the time left until overflow.",
         "points": 20,
         "timing": true
       },
       {
-        "criterion": "Leave the second drum upright in storage.",
+        "criterion": "Leave the second bucket, holding at least 2 L, upright and stable in its storage region, released, for one second.",
         "points": 20,
         "timing": false
       }
     ],
-    "status": "Scene and Harbor package are present. The second half was accepted from a saved intermediate state. A complete run from the beginning is pending. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
+    "status": "Reviewed rubric and Harbor package (xbench-sim#70). The dispenser stand is raised to 0.62 m. The full-bucket carry is not yet checked in simulation. Reviewed and merged on 2026-11-28; offline checks only.",
     "pending": "Episode time and step limits are pending.",
     "images": [
       {
@@ -435,23 +430,28 @@ const examples = {
     ]
   },
   "W03": {
-    "instruction": "Put the item on the tray so that the item and the tray leave together on the conveyor.",
-    "zh": "把物品放到托盘上，让它们一起随传送带送走。",
-    "environment": "Trays travel out of reach on the conveyor. Place the item before its tray leaves.",
-    "success": "The item leaves on the tray with the conveyor.",
+    "instruction": "Place the tray from the pallet stack near the conveyor onto the conveyor, with the box from the rack in front of you resting on the tray. Keep both items off the floor.",
+    "zh": "把托盘堆上的托盘放到传送带上，并让你面前货架上的箱子放在托盘上。两样东西都不能落地。",
+    "environment": "Warehouse conveyor that runs continuously at 0.18 m/s from the start and cannot be paused or reversed. The tray sits on a pallet stack near the conveyor and the box on a rack in front of the robot; both hands may be used. An empty tray or a lone box that crosses the dispatch line cannot be fixed afterwards.",
+    "success": "The box remains supported by the tray as both completely cross the dispatch line, with neither object supported by the robot. Neither the box nor the tray has touched the floor.",
     "steps": [
       {
-        "criterion": "Grasp the item and lift it from its starting position.",
-        "points": 50,
+        "criterion": "Grasp the box and lift it clear of its starting support.",
+        "points": 20,
         "timing": false
       },
       {
-        "criterion": "Put the item on the tray so they leave together. Record time from placement until the tray moves out of reach.",
-        "points": 50,
+        "criterion": "Place the box on the tray and release it, keeping it supported and stable relative to the tray for 0.5 seconds. This may be done in the preparation area or on the conveyor.",
+        "points": 60,
+        "timing": false
+      },
+      {
+        "criterion": "Send the loaded tray on the conveyor: the box and tray both completely cross the dispatch line, with the box stable on the tray and neither touching the robot.",
+        "points": 20,
         "timing": true
       }
     ],
-    "status": "Scene and Harbor package are present. Earlier scripted comparisons include an empty-tray failure and a loaded-tray success. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
+    "status": "Reviewed rubric and Harbor package (xbench-sim#70). Earlier scripted comparisons include an empty-tray failure and a loaded-tray success. Reviewed and merged on 2026-11-28; offline checks only.",
     "pending": "Episode time and step limits are pending.",
     "images": [
       {
@@ -465,28 +465,28 @@ const examples = {
     ]
   },
   "W04": {
-    "instruction": "Place the box you are holding and the box arriving on the conveyor at their designated places. Neither box may fall.",
-    "zh": "把手里的货和传送带送来的货都放到指定位置。",
-    "environment": "Incoming cargo travels toward the end of the conveyor. Free a hand to catch it in time.",
-    "success": "Both boxes are in their designated places. The incoming box has not fallen off the conveyor.",
+    "instruction": "Place the red toolbox you are holding and the black toolbox on the conveyor on the shared storage shelf at the far end of the loading area. Leave both toolboxes resting stably without robot support; neither may touch the floor.",
+    "zh": "把你手里的红色工具箱和传送带上的黑色工具箱，放到装货区远端的共用货架上。让两个工具箱都不靠机器人扶持、稳稳地放着；两个都不能碰到地面。",
+    "environment": "Warehouse loading area. The robot starts holding the red toolbox while the black toolbox travels along the conveyor toward its end; a temporary rack pallet stands beside the conveyor. Setting the red toolbox down first is optional: carrying one toolbox in each hand can still succeed with 80 points. A toolbox touching the floor ends the episode.",
+    "success": "Both toolboxes rest stably on the shared destination shelf without robot support. The black toolbox was picked up off the conveyor belt, and neither toolbox has touched the floor.",
     "steps": [
       {
-        "criterion": "Place the held box at its designated position and free the receiving hand.",
-        "points": 33,
+        "criterion": "Before picking up the incoming toolbox, leave the red toolbox supported by the temporary rack pallet beside the conveyor, released, and stable for 0.5 seconds.",
+        "points": 20,
         "timing": false
       },
       {
-        "criterion": "Grasp the incoming box before the belt ends without dropping it. Record time until it would have reached the end.",
-        "points": 33,
+        "criterion": "Grasp the black toolbox and lift it clear of the belt before its whole footprint passes the belt end, then hold it for 0.5 seconds. Touching, pushing or holding it on the belt does not count. Record the belt-travel time left at pickup.",
+        "points": 40,
         "timing": true
       },
       {
-        "criterion": "Leave both boxes stationary at their designated positions.",
-        "points": 34,
+        "criterion": "Leave both toolboxes supported by the shared destination shelf, released, and stable for one second. Minor edge or handle overhang is allowed; precise centering and an upright orientation are not required.",
+        "points": 40,
         "timing": false
       }
     ],
-    "status": "Scene and Harbor package are present. A two-handed catch was demonstrated. The full placement sequence is unverified. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
+    "status": "Reviewed rubric and Harbor package (xbench-sim#70). A two-handed catch was demonstrated earlier; the initial one-hand hold and the full placement sequence are not yet checked. Reviewed and merged on 2026-11-28; offline checks only.",
     "pending": "Episode time and step limits are pending.",
     "images": [
       {
@@ -500,29 +500,29 @@ const examples = {
     ]
   },
   "W05": {
-    "instruction": "Load the two boxes into the inner and outer cargo slots of the tugger trailer.",
-    "zh": "把两箱货装到牵引车车厢的内侧货位和外侧货位。",
-    "environment": "Warehouse aisle. A tugger with a trailer loops on a fixed route and stops for 30 s each lap (about 92 s per lap). Two 1 kg toolboxes with upright handles wait on a pick table; a staging table stands 1.1 m from the trailer. Load the inner slot first, then the outer slot during a stop.",
-    "success": "Both boxes depart in their assigned slots without the tugger hitting the robot or cargo.",
+    "instruction": "Load the red toolbox from the pick table into the inner slot of the tugger trailer and the black toolbox into the outer slot. Leave both boxes supported by the trailer and keep the robot clear of the vehicle route. Keep the robot away from the tractor and trailer, and keep both boxes off the tractor and the floor.",
+    "zh": "把取货桌上的红色工具箱装进拖车内侧货位，黑色工具箱装进外侧货位，两箱都由拖车承托，机器人离开车辆路线；机器人不碰牵引车和拖车，两箱不碰牵引车、不落地。",
+    "environment": "Warehouse aisle. A tugger with a trailer loops on a fixed route and stops for 30 s each lap (about 92 s per lap). Two 1 kg toolboxes with upright handles wait on a pick table (0.90 m), and a staging table stands 1.1 m from the trailer. Either box may go first, in the same or different stops. The robot touching the tractor or trailer, a box touching the tractor, or a box on the floor ends the episode.",
+    "success": "Both toolboxes are released and supported in their assigned slots on the trailer. The robot is clear of the vehicle route, and no prohibited contact or floor drop has occurred.",
     "steps": [
       {
-        "criterion": "Stage both boxes inside the marked area beside the stop.",
-        "points": 33,
-        "timing": false
-      },
-      {
-        "criterion": "Place the entire inner box in its slot. Keep the robot off the vehicle route when it moves. Record time until departure.",
-        "points": 33,
+        "criterion": "During a stop, place the red toolbox in the inner slot, release it completely, and leave it supported and stable for 1 second.",
+        "points": 40,
         "timing": true
       },
       {
-        "criterion": "Apply the same placement and clearance rules to the outer slot. Record time until departure and laps used.",
-        "points": 34,
+        "criterion": "During a stop, place the black toolbox in the outer slot, release it completely, and leave it supported and stable for 1 second.",
+        "points": 40,
+        "timing": true
+      },
+      {
+        "criterion": "Leave both toolboxes released and supported in their assigned slots as the trailer travels at least 0.5 m after departing the stop, with the entire robot clear of the vehicle’s current and upcoming travel area.",
+        "points": 20,
         "timing": true
       }
     ],
-    "status": "Scene and Harbor package are present. The current scene uses a looping tugger. Earlier recordings cover a fixed shelf. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Stop duration and lap period are pending. Episode time and step limits are pending.",
+    "status": "Reviewed rubric and Harbor package with the looping tugger (xbench-sim#70). Robot clearance from the route at departure is not yet checked in simulation. Reviewed and merged on 2026-11-28; offline checks only.",
+    "pending": "Stop duration (30 s) and lap period (about 92 s) are estimates. Episode time and step limits are pending.",
     "images": [
       {
         "src": "images/w05-scene.jpg",
@@ -734,28 +734,28 @@ const examples = {
     ]
   },
   "N06": {
-    "instruction": "Carry the blue crate from the small table to the other side of the revolving door, holding it with both hands.",
-    "zh": "抱着一个箱子走到旋转门的另一侧。",
-    "environment": "The revolving door rotates continuously. Enter a gap and match its motion while carrying the crate.",
-    "success": "The robot and crate reach the far side without any door leaf touching them.",
+    "instruction": "Carry the blue crate from the small table on your right to the other side of the revolving door.",
+    "zh": "把你右前方小桌上的蓝色周转箱，搬到旋转门的另一侧。",
+    "environment": "A three-wing revolving door, 3.0 m across, turns continuously (6°/s at 1x, 12°/s at 2x); a missed gap can be waited out. The crate (400 × 300 × 220 mm, 2 kg) has a carry bar across its top at 0.93 m, so one hand can lift it. A wing touching the robot or crate ends the episode.",
+    "success": "The robot and the crate reach the far side of the door, and no door wing has touched either.",
     "steps": [
       {
-        "criterion": "Hold the crate clear of the floor with both hands in the entrance area.",
+        "criterion": "The crate is held off the table by at least one hand, with the robot in the entrance area.",
         "points": 33,
         "timing": false
       },
       {
-        "criterion": "Move the entire robot and crate between two leaves without contact. Record time before the trailing leaf catches up.",
+        "criterion": "The whole robot and crate move into the space between two wings without contact. Record time until the trailing wing reaches the robot.",
         "points": 33,
         "timing": true
       },
       {
-        "criterion": "Follow the door to the exit and bring both robot and crate fully outside without contact.",
+        "criterion": "The robot and the crate, still in hand, leave through the exit to the far side without contact.",
         "points": 34,
         "timing": true
       }
     ],
-    "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
+    "status": "One-hand crate with a carry bar; a scripted run carried it through the revolving door once at 1x and once at 2x (xbench-sim#69). Repeat runs are pending. Reviewed and merged on 2026-11-28; offline checks only.",
     "pending": "Episode time and step limits are pending.",
     "images": [
       {
