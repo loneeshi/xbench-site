@@ -5,8 +5,6 @@ const catalogue = [
   {"id": "O04", "title": "Clear the corridor", "scene": "Office", "dynamic": "D2a", "efficiency": "E2"},
   {"id": "O05", "title": "Receive an elevator delivery", "scene": "Office", "dynamic": "D1", "efficiency": "E2"},
   {"id": "K02", "title": "Serve the dining table", "scene": "Kitchen", "dynamic": "D2a", "efficiency": "E2"},
-  {"id": "K03", "title": "Fridge swap", "scene": "Kitchen", "dynamic": "D1", "efficiency": "E3"},
-  {"id": "K04", "title": "Store the dishes", "scene": "Kitchen", "dynamic": "D1", "efficiency": "E3"},
   {"id": "K05", "title": "Return with the extinguisher", "scene": "Kitchen", "dynamic": "D2a", "efficiency": "E2"},
   {"id": "W01", "title": "Cross the forklift aisle", "scene": "Warehouse", "dynamic": "D2b", "efficiency": "E2"},
   {"id": "W02", "title": "Fill two drums", "scene": "Warehouse", "dynamic": "D1", "efficiency": "E2"},
@@ -16,10 +14,8 @@ const catalogue = [
   {"id": "N01", "title": "Chest freezer retrieval", "scene": "Kitchen", "dynamic": "D1", "efficiency": "E3"},
   {"id": "N02", "title": "Collect a buffet dish", "scene": "Office", "dynamic": "D2b", "efficiency": "E3"},
   {"id": "N03", "title": "Load the bin liner", "scene": "Kitchen", "dynamic": "D1", "efficiency": "E3"},
-  {"id": "N04", "title": "Hold the cart on the ramp and load it", "scene": "Warehouse", "dynamic": "D1", "efficiency": "E3"},
   {"id": "N05", "title": "Pass a saucepan through the timed hatch", "scene": "Kitchen", "dynamic": "D1", "efficiency": "E2"},
   {"id": "N06", "title": "Carry a box through the revolving door", "scene": "Office", "dynamic": "D2b", "efficiency": "E3"},
-  {"id": "N07", "title": "Pick from the turntable", "scene": "Office", "dynamic": "D2b", "efficiency": "E2"},
   {"id": "N08", "title": "Carry an organiser through the gate", "scene": "Office", "dynamic": "D2b", "efficiency": "E2"},
   {"id": "N09", "title": "Secure the belt barrier", "scene": "Office", "dynamic": "D1", "efficiency": "E3"},
   {"id": "N10", "title": "Load the freight trailer", "scene": "Warehouse", "dynamic": "D2a", "efficiency": "E3"},
@@ -27,6 +23,10 @@ const catalogue = [
   {"id": "N12", "title": "Move the shelf cart outside", "scene": "Warehouse", "dynamic": "D2a", "efficiency": "E2"},
   {"id": "N13", "title": "Unlock the box on the conveyor", "scene": "Warehouse", "dynamic": "D2a", "efficiency": "E3"},
   {"id": "N14", "title": "Push a cart through two doors", "scene": "Office", "dynamic": "D2b", "efficiency": "E3"},
-  {"id": "N15", "title": "Park the handcart", "scene": "Warehouse", "dynamic": "D2a", "efficiency": "E2"},
-  {"id": "N16", "title": "Carry the board", "scene": "Warehouse", "dynamic": "D2a", "efficiency": "E3"}
+  {"id": "N16", "title": "Carry the board", "scene": "Warehouse", "dynamic": "D2a", "efficiency": "E3"},
+  {"id": "N17", "title": "Stop the tugger", "scene": "Warehouse", "dynamic": "D2b", "efficiency": "E3"},
+  {"id": "N18", "title": "Stop the serving robot", "scene": "Kitchen", "dynamic": "D2b", "efficiency": "E3"},
+  {"id": "N19", "title": "Stop the AGV", "scene": "Office", "dynamic": "D2b", "efficiency": "E3"},
+  {"id": "N20", "title": "Use the keycard gate", "scene": "Office", "dynamic": "D1", "efficiency": "E2"},
+  {"id": "N21", "title": "Take an item from the dish return rack", "scene": "Office", "dynamic": "D2a", "efficiency": "E2"}
 ];

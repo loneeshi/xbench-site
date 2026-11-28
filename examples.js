@@ -229,91 +229,6 @@ const examples = {
       }
     ]
   },
-  "K03": {
-    "instruction": "Swap the bottle on the fridge shelf with the cup on the counter to the right of the sink, then close both fridge doors. Leave both items upright and stable in their exchanged locations.",
-    "zh": "交换冰箱搁板上的瓶子和水槽右侧台面上的杯子，再关上两扇冰箱门。让两件物品在交换后的位置直立放稳。",
-    "environment": "Single-wall kitchen with a French-door fridge whose doors close by themselves from any opening angle, like a commercial display fridge (from the stop in about 6 s, from 60° in about 4.5 s; estimate). The bottle stands on a fridge shelf, the cup on the counter right of the sink, and a plate occupies the marked temporary space; hand points are 0.89–1.40 m. Holding a door open is not required; holding time is only recorded.",
-    "success": "The bottle rests upright on the counter in the cup’s starting region and the cup rests upright on the fridge shelf in the bottle’s starting region, without robot support. Both fridge doors are closed and released, and no item or the plate has touched the floor.",
-    "steps": [
-      {
-        "criterion": "Before completing the exchange, clear the marked temporary space by moving the occupying plate onto another counter surface and releasing it. Keep the space clear and the plate stable for 0.5 seconds.",
-        "points": 20,
-        "timing": false
-      },
-      {
-        "criterion": "Open either fridge door to at least 60°.",
-        "points": 20,
-        "timing": false
-      },
-      {
-        "criterion": "Exchange the bottle and cup into each other’s starting regions. Leave both upright, supported by the counter or fridge shelf, with all robot contact released, and stable for one second.",
-        "points": 40,
-        "timing": false
-      },
-      {
-        "criterion": "After completing the exchange, leave both fridge doors within 5° of closed, with all robot contact with the doors released, and stable for one second. Both items must remain upright, supported, and released in their exchanged locations.",
-        "points": 20,
-        "timing": false
-      }
-    ],
-    "status": "Scene checked on 2026-11-27 under the 1/120 s physics step. Holding the door is no longer required; holding time is only recorded. Wired into Harbor (xbench-sim#65). A full run of the revised design is pending. Reviewed and merged on 2026-11-28; offline checks only.",
-    "pending": "Door closing time is an estimate (no product specification found). Episode limits are pending.",
-    "images": [
-      {
-        "src": "images/k03-scene.png",
-        "view": "Full scene at start"
-      },
-      {
-        "src": "images/k03-head.png",
-        "view": "Head camera at start"
-      }
-    ]
-  },
-  "K04": {
-    "instruction": "Put the cup, the plate and the bowl from the dishwasher away in the wall cabinet.",
-    "zh": "把洗碗机里的杯子、盘子和餐具放进吊柜。",
-    "environment": "L-shaped kitchen. The wall cabinet has a lift-up door that falls when released (from its 46 deg stop it closes in about 0.9 s). The cup, plate and bowl sit on a raised rack in the dishwasher drawer at 0.70 m; the cabinet bottom is at 1.28 m and the door handle at most 1.49 m, so no hand point needs bending or overhead reach. Support the door while transferring the dishes.",
-    "success": "All three items are in their designated cabinet positions. Both appliance doors are closed and the cabinet door has not struck the arm or items.",
-    "steps": [
-      {
-        "criterion": "Open the dishwasher fully.",
-        "points": 20,
-        "timing": false
-      },
-      {
-        "criterion": "Move all three items into the marked counter area below the cabinet.",
-        "points": 20,
-        "timing": false
-      },
-      {
-        "criterion": "Hold the cabinet door open high enough to insert the dishes. The angle is pending.",
-        "points": 20,
-        "timing": false
-      },
-      {
-        "criterion": "Store all three in their designated slots while supporting the door. Keep it clear of the arm and items. Record support duration.",
-        "points": 20,
-        "timing": true
-      },
-      {
-        "criterion": "Withdraw the arm and close both doors with the arm clear.",
-        "points": 20,
-        "timing": false
-      }
-    ],
-    "status": "Scene and Harbor package are present. The built kitchen uses a drawer at 95% travel, allows any free slot per item and substitutes a handled bowl. The design calls for a dishwasher door and assigned slots. Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "The door counts as raised at 40 deg. Damping and closing time are estimates until human teleoperation. Episode time and step limits are pending.",
-    "images": [
-      {
-        "src": "images/k04-scene.png",
-        "view": "Full scene at start"
-      },
-      {
-        "src": "images/k04-head.png",
-        "view": "Head camera at start"
-      }
-    ]
-  },
   "K05": {
     "instruction": "Get the fire extinguisher and return to the burning stove.",
     "zh": "灶台起火了，去取灭火器，回到灶台前。",
@@ -654,50 +569,6 @@ const examples = {
       }
     ]
   },
-  "N04": {
-    "instruction": "Push the handcart up the ramp into the loading zone, then load the toolbox from the table onto its top shelf.",
-    "zh": "把推车推上坡到装货区，左手扶住车，右手把桌上的工具箱放到车上。",
-    "environment": "Warehouse with a gentle 0.95 deg ramp. An empty double-deck service cart (the N10 cart) stands on the flat floor at the foot of the ramp. A red 1 kg toolbox with an upright handle sits on a level table beside the loading zone, which is on the slope. A released cart rolls back down: about 1.4 m in 5 s.",
-    "success": "The cart is in the loading zone with the toolbox at rest on its top deck, and the cart never rolled back more than 0.075 m from the highest point it reached.",
-    "steps": [
-      {
-        "criterion": "Push the cart into the loading zone on the slope.",
-        "points": 25,
-        "timing": false
-      },
-      {
-        "criterion": "Lift the toolbox off the table (at least 2 cm).",
-        "points": 25,
-        "timing": false
-      },
-      {
-        "criterion": "Keep the left hand on the cart handle and the cart in the zone during the whole transfer. Scored over the interval.",
-        "points": 25,
-        "timing": true
-      },
-      {
-        "criterion": "Leave the toolbox at rest on the top deck (moving less than 1 cm in 1 s) while the cart is in the zone.",
-        "points": 25,
-        "timing": false
-      }
-    ],
-    "status": "Scene rebuilt on 2026-11-27 after the review and Harbor package updated. Server integration and an end-to-end trial are pending.",
-    "pending": "Rollback limit 0.075 m, settle and lift thresholds are estimates until human teleoperation. Episode time and step limits are pending.",
-    "images": [
-      {
-        "src": "images/n04-scene.jpg",
-        "view": "Full scene at start"
-      },
-      {
-        "src": "images/n04-head.jpg",
-        "view": "Head camera at start"
-      },
-      {
-        "src": "images/n04-zone.jpg",
-        "view": "Loading zone close-up"
-      }
-    ]
-  },
   "N05": {
     "instruction": "Push the cart to the serving hatch and pass the saucepan from the cart through the hatch onto the counter on the other side.",
     "zh": "把推车上的东西递到卷帘的另一侧放好。",
@@ -764,36 +635,6 @@ const examples = {
       },
       {
         "src": "images/n06-head.jpg",
-        "view": "Head camera at start"
-      }
-    ]
-  },
-  "N07": {
-    "instruction": "Take the orange canister off the turntable on the round table without knocking over the other items.",
-    "zh": "从转盘上取下指定的那一件。",
-    "environment": "A turntable repeatedly carries the target past the pickup point.",
-    "success": "Remove the designated item without tipping adjacent items.",
-    "steps": [
-      {
-        "criterion": "Reach the pickup height above the edge of the turntable.",
-        "points": 50,
-        "timing": false
-      },
-      {
-        "criterion": "Lift the target off the turntable as it passes. Neighbouring items must remain upright. Record revolutions used and elapsed time.",
-        "points": 50,
-        "timing": true
-      }
-    ],
-    "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Episode time and step limits are pending.",
-    "images": [
-      {
-        "src": "images/n07-scene.jpg",
-        "view": "Full scene at start"
-      },
-      {
-        "src": "images/n07-head.jpg",
         "view": "Head camera at start"
       }
     ]
@@ -1062,41 +903,6 @@ const examples = {
       }
     ]
   },
-  "N15": {
-    "instruction": "Push the handcart on the slope into the parking area.",
-    "zh": "把坡上的推车推到停放区。",
-    "environment": "The cart rolls down the slope once. Intercept it before it crosses the line.",
-    "success": "The cart rests in the parking area without crossing the line, tipping or dropping cargo.",
-    "steps": [
-      {
-        "criterion": "Reach the receiving area with both hands at handle height.",
-        "points": 33,
-        "timing": false
-      },
-      {
-        "criterion": "Stop the cart with its front still short of the line, upright and with cargo retained. Measure remaining distance to the line.",
-        "points": 33,
-        "timing": true
-      },
-      {
-        "criterion": "Push the cart into the parking area and leave it stationary.",
-        "points": 34,
-        "timing": false
-      }
-    ],
-    "status": "Scene and Harbor package are present.  Server integration and an end-to-end trial are pending. No end-to-end pass is recorded under the current robot and clock rules.",
-    "pending": "Design estimates: 2° slope, 8 m of rolling distance, 15–20 seconds to the line and a 3 m robot approach. Episode time and step limits are pending.",
-    "images": [
-      {
-        "src": "images/n15-scene.jpg",
-        "view": "Full scene at start"
-      },
-      {
-        "src": "images/n15-head.jpg",
-        "view": "Head camera at start"
-      }
-    ]
-  },
   "N16": {
     "instruction": "Carry the long board together with the freight vehicle to the unloading point and put it down on the pallets.",
     "zh": "和运货车一起把长板抬到卸货点，放到架子上。",
@@ -1133,6 +939,186 @@ const examples = {
       },
       {
         "src": "images/n16-head.jpg",
+        "view": "Head camera at start"
+      }
+    ]
+  },
+  "N17": {
+    "instruction": "A tugger in the warehouse is out of control. Press the emergency stop button on its trailer to stop it, then step back clear of it.",
+    "zh": "仓库里的一台牵引车失控了。按下它拖车上的急停键让它停下，然后退开。",
+    "environment": "Open middle floor of the Isaac warehouse, about 8.5 × 10 m. A tugger pulls a trailer 1.85 m behind it along a random path of straight runs and arcs, with a new seed each episode, at one constant speed between 0.15 and 0.25 m/s. It avoids nothing, including the robot, and an amber lamp flashes while it moves. A red mushroom e-stop (40 mm, 4 mm travel) sits on a steel bracket 0.12 m behind the trailer tail, its top 0.95 m above the floor. Pressing it in 1 mm stops the vehicle within 0.3 s, and the vehicle then stays locked. If the moving vehicle touches the robot, the episode ends and earned points stay. The robot starts about 6.6 m away, facing the open floor.",
+    "success": "The vehicle is stopped and stays stopped, the robot stands clear of it, and the vehicle never touched the robot. Full success also needs every milestone.",
+    "steps": [
+      {
+        "criterion": "The base centre comes within 1.0 m of the vehicle outline.",
+        "points": 33,
+        "timing": false
+      },
+      {
+        "criterion": "The e-stop cap is pressed in at least 1 mm and the vehicle speed falls to zero within 0.5 s. There is no deadline; the time from the start to the press is recorded.",
+        "points": 33,
+        "timing": true
+      },
+      {
+        "criterion": "After the vehicle has stopped, every robot part stays at least 0.3 m from it and all joints stay still for 1 s.",
+        "points": 34,
+        "timing": false
+      }
+    ],
+    "status": "Scene, live judges, Harbor package, evaluator and mechanism demo merged on 2026-11-28 (xbench-sim#75). A press check with the robot's own right hand pushed the e-stop fully in, with the vehicle standing still and the torso at zero. Speeds and physical parameters are being checked with segment scripts. No human run yet.",
+    "pending": "Values are estimates: vehicle speed range, route segment sizes, e-stop size and spring, braking time and judging limits. Episode time and step limits are pending.",
+    "images": [
+      {
+        "src": "images/n17-scene.png",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n17-head.png",
+        "view": "Head camera at start"
+      }
+    ]
+  },
+  "N18": {
+    "instruction": "A serving robot in the kitchen is out of control. Press the emergency stop button on its back to stop it, then step back clear of it.",
+    "zh": "厨房里的一台送餐机器人失控了。按下它背后的急停键让它停下，然后退开。",
+    "environment": "Accepted L-shaped SimReady kitchen with an island and bar stools. A delivery robot the size of a KEENON W3 (0.46 × 0.55 × 1.08 m) moves around the open middle of the kitchen, about 3.1 × 3.8 m, along a random path of straight runs and tight arcs, with a new seed each episode, at one constant speed between 0.15 and 0.25 m/s. It avoids nothing, including the robot. The same red mushroom e-stop sits on a small bracket at its rear, its top 0.95 m above the floor; pressing it in 1 mm stops the serving robot within 0.3 s and it stays locked. If the moving serving robot touches the robot, the episode ends and earned points stay. The robot starts about 4 m away.",
+    "success": "The vehicle is stopped and stays stopped, the robot stands clear of it, and the vehicle never touched the robot. Full success also needs every milestone.",
+    "steps": [
+      {
+        "criterion": "The base centre comes within 1.0 m of the vehicle outline.",
+        "points": 33,
+        "timing": false
+      },
+      {
+        "criterion": "The e-stop cap is pressed in at least 1 mm and the vehicle speed falls to zero within 0.5 s. There is no deadline; the time from the start to the press is recorded.",
+        "points": 33,
+        "timing": true
+      },
+      {
+        "criterion": "After the vehicle has stopped, every robot part stays at least 0.3 m from it and all joints stay still for 1 s.",
+        "points": 34,
+        "timing": false
+      }
+    ],
+    "status": "Scene, live judges, Harbor package, evaluator and mechanism demo merged on 2026-11-28 (xbench-sim#75). A press check with the robot's own right hand pushed the e-stop fully in, with the vehicle standing still and the torso at zero. Speeds and physical parameters are being checked with segment scripts. No human run yet.",
+    "pending": "Values are estimates: vehicle speed range, route segment sizes, e-stop size and spring, braking time and judging limits. Episode time and step limits are pending.",
+    "images": [
+      {
+        "src": "images/n18-scene.png",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n18-head.png",
+        "view": "Head camera at start"
+      }
+    ]
+  },
+  "N19": {
+    "instruction": "A transfer AGV on the office floor is out of control. Press the emergency stop button on its goods platform to stop it, then step back clear of it.",
+    "zh": "办公楼层里的一台转运 AGV 失控了。按下它货台上的急停键让它停下，然后退开。",
+    "environment": "Open lobby floor west of the office reception, about 5.7 × 10 m. An iw.hub AGV carries a blue goods platform 0.75 m high with side rails and two cartons. It moves along a random path of straight runs and arcs, with a new seed each episode, at one constant speed between 0.15 and 0.25 m/s, and avoids nothing, including the robot. The same red mushroom e-stop sits at the rear edge of the platform, its top 0.85 m above the floor; pressing it in 1 mm stops the AGV within 0.3 s and it stays locked. If the moving AGV touches the robot, the episode ends and earned points stay. The robot starts about 7 m away.",
+    "success": "The vehicle is stopped and stays stopped, the robot stands clear of it, and the vehicle never touched the robot. Full success also needs every milestone.",
+    "steps": [
+      {
+        "criterion": "The base centre comes within 1.0 m of the vehicle outline.",
+        "points": 33,
+        "timing": false
+      },
+      {
+        "criterion": "The e-stop cap is pressed in at least 1 mm and the vehicle speed falls to zero within 0.5 s. There is no deadline; the time from the start to the press is recorded.",
+        "points": 33,
+        "timing": true
+      },
+      {
+        "criterion": "After the vehicle has stopped, every robot part stays at least 0.3 m from it and all joints stay still for 1 s.",
+        "points": 34,
+        "timing": false
+      }
+    ],
+    "status": "Scene, live judges, Harbor package, evaluator and mechanism demo merged on 2026-11-28 (xbench-sim#75). A press check with the robot's own right hand pushed the e-stop fully in, with the vehicle standing still and the torso at zero. Speeds and physical parameters are being checked with segment scripts. No human run yet.",
+    "pending": "Values are estimates: vehicle speed range, route segment sizes, e-stop size and spring, braking time and judging limits. Episode time and step limits are pending.",
+    "images": [
+      {
+        "src": "images/n19-scene.png",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n19-head.png",
+        "view": "Head camera at start"
+      }
+    ]
+  },
+  "N20": {
+    "instruction": "Take the blue keycard from the table on your right, use it at the reader beside the gate, and carry it through to the table on the far side.",
+    "zh": "从右手边的桌上拿起蓝色门禁卡，在闸门旁的读卡器上刷卡，带着卡穿过闸门，放到另一侧的桌上。",
+    "environment": "A corridor north of the office reception is closed by a sliding gate with fixed side panels; the doorway is 1.30 m wide. The near and far tables are 0.78 m high. The keycard sits in a holder with a cross handle (0.08 kg) that one hand can pinch. The reader beside the gate reads a card held in its zone, centred about 1.01 m above the floor. A read can fail: the lamp turns red, the gate stays shut, and the card must leave the zone before it is tried again. After an accepted read the leaf slides open in 1.2 s, stays fully open for 7 s and then closes. If the leaf touches any robot part, the episode ends and earned points stay.",
+    "success": "The keycard rests on the far table after the robot carried it through the open gate, and the gate leaf never touched the robot. Full success also needs every milestone.",
+    "steps": [
+      {
+        "criterion": "Two fingers of one hand hold the keycard holder and it is lifted off the near table.",
+        "points": 25,
+        "timing": false
+      },
+      {
+        "criterion": "The held card enters the reader zone and the read is accepted.",
+        "points": 25,
+        "timing": false
+      },
+      {
+        "criterion": "While the gate is fully open, the robot carries the card through the doorway to the far side. The time left before the leaf starts to close is recorded.",
+        "points": 25,
+        "timing": true
+      },
+      {
+        "criterion": "The card is released on the far table inside its placement area and stays supported for 0.5 s.",
+        "points": 25,
+        "timing": false
+      }
+    ],
+    "status": "Scene, live judges, Harbor package, evaluator and mechanism demo merged on 2026-11-28 (xbench-sim#74). Right-hand IK reaches the card, the lift height and the reader zone. Speeds and physical parameters are being checked with segment scripts. No human run yet.",
+    "pending": "Values are estimates: gate travel and open time, the 0.30 read-failure chance, card and reader sizes, and judging tolerances. Episode time and step limits are pending.",
+    "images": [
+      {
+        "src": "images/n20-scene.png",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n20-head.png",
+        "view": "Head camera at start"
+      }
+    ]
+  },
+  "N21": {
+    "instruction": "Take the item named in GET /task off the dish return rack behind the window in front of you, and put it on the tray on the small table to the right of the window. Do not knock any other item off the rack.",
+    "zh": "从你面前窗口后的餐具回收架上，取下 GET /task 里写明的那件东西，放到窗口右边小桌上的托盘里；不要碰落架上别的东西。",
+    "environment": "A corner of the office floor serves as a staff canteen. A partition wall has a service window 1.6 m wide, from 0.90 to 1.70 m above the floor. Behind it, a closed loop of 11 carriers moves continuously at 0.05 m/s. Each carrier has one shelf at 1.00 m and holds one cup or bowl; each item passes the window once and stays in view for about 32 s. Eight items ride on the rack. GET /task names the target by colour and kind, and look-alikes of the same colour or kind ride nearby. The named item reaches the window 35 to 95 s after the start; the seed changes the order each episode. A tray sits on a small 0.90 m table to the right of the window, and a marked area on the floor shows where to stand. Only one shelf level is built so far.",
+    "success": "The named item rests upright in the tray, released and still; no other item was knocked off the rack, and the rack carriers never touched the robot. Full success also needs every milestone.",
+    "steps": [
+      {
+        "criterion": "The base centre is inside the marked area in front of the window.",
+        "points": 33,
+        "timing": false
+      },
+      {
+        "criterion": "The fingers lift the named item at least 2 cm off its own shelf, taking it directly from the rack before it passes the right edge of the window.",
+        "points": 33,
+        "timing": true
+      },
+      {
+        "criterion": "The named item rests in the tray, tilted no more than 20°, released and still for 0.5 s.",
+        "points": 34,
+        "timing": false
+      }
+    ],
+    "status": "Scene, live judges, Harbor package, evaluator and mechanism demo merged on 2026-11-28 (xbench-sim#76). Only one shelf level is built. The scripted grasp from the moving carrier has not held the item yet. Speeds and physical parameters are being checked with segment scripts. No human run yet.",
+    "pending": "Values are estimates: rack speed, window size, arrival times, shelf height and judging limits. Whether to add more shelf levels is open. Episode time and step limits are pending.",
+    "images": [
+      {
+        "src": "images/n21-scene.png",
+        "view": "Full scene at start"
+      },
+      {
+        "src": "images/n21-head.png",
         "view": "Head camera at start"
       }
     ]
