@@ -617,21 +617,21 @@ const examples = {
   "N03": {
     "instruction": "Put the paper bag from the cart into the kitchen bin.",
     "zh": "把推车上的垃圾袋放进垃圾桶。",
-    "environment": "Galley kitchen. A blue wheeled recycling bin (NVIDIA SimReady) with a hinged lid and a front handle bar; the lid closes by itself when released (from 75 deg in about 1.0 s). A paper shopping bag with two handles stands on a service cart parked beside the bin. From where the lid can be opened, the free hand cannot reach the bag: the robot must hold the lid open and side-step about 0.3 m. Hand points 0.73-1.35 m.",
-    "success": "The bag is inside the bin, the lid is shut and the hand has not been caught.",
+    "environment": "Galley kitchen. A blue wheeled recycling bin (NVIDIA SimReady) with a hinged lid and a front handle bar; the lid closes by itself when released (from 75 deg in about 1.0 s). An empty food can (YCB tomato soup can, 6.6 cm across) stands upright on the 0.84 m shelf of a service cart parked beside the bin. From where the lid can be opened, the free hand cannot reach the can: the robot must hold the lid open and side-step about 0.3 m. Hand points 0.73-1.26 m.",
+    "success": "The can is inside the bin and at rest, the lid is shut and the hand has not been caught.",
     "steps": [
       {
-        "criterion": "Park the bag cart in the marked area by the bin.",
+        "criterion": "Park the cart in the marked area by the bin.",
         "points": 25,
         "timing": false
       },
       {
-        "criterion": "Hold the lid open far enough for the bag. The required angle is pending.",
+        "criterion": "Hold the lid open far enough for the can. The required angle is pending.",
         "points": 25,
         "timing": false
       },
       {
-        "criterion": "Keep the lid supported while taking the bag and placing it inside. The lid must not close on the arm. Record support duration.",
+        "criterion": "Keep the lid supported while taking the can and dropping it inside. The lid must not close on the arm. Record support duration.",
         "points": 25,
         "timing": true
       },
@@ -641,8 +641,8 @@ const examples = {
         "timing": false
       }
     ],
-    "status": "Scene rebuilt on 2026-11-27 after the review. Scripted single-step checks with the real controller: open the lid, hold it while side-stepping, and lift the bag pass. Putting the bag into the bin is not yet achieved: with one handle it swings and drops (3 tries); with both handles gripped together it no longer swings but slips out of an oblique grasp (5 tries). A layout or stance change is being considered. Server integration and an end-to-end trial are pending.",
-    "pending": "The minimum opening angle is pending. Episode time and step limits are pending.",
+    "status": "Scene changed on 2026-11-27: the paper bag is replaced by an empty can that can be released above the opening. The scene self-check passes. A pose-only reach check with side grasps found no solution; top-down grasps were not tried. Feasibility is checked by human teleoperation. Server integration and an end-to-end trial are pending.",
+    "pending": "The first sentence still names the paper bag; a new sentence awaits approval. The minimum opening angle and episode limits are pending. The can is a food can, not an aluminium drink can: no drink-can asset with 4096 textures was found.",
     "images": [
       {
         "src": "images/n03-scene.png",
