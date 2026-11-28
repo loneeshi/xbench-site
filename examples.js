@@ -615,7 +615,7 @@ const examples = {
     ]
   },
   "N03": {
-    "instruction": "Put the paper bag from the cart into the kitchen bin.",
+    "instruction": "Put the empty can from the cart into the kitchen bin.",
     "zh": "把推车上的垃圾袋放进垃圾桶。",
     "environment": "Galley kitchen. A blue wheeled recycling bin (NVIDIA SimReady) with a hinged lid and a front handle bar; the lid closes by itself when released (from 75 deg in about 1.0 s). An empty food can (YCB tomato soup can, 6.6 cm across) stands upright on the 0.84 m shelf of a service cart parked beside the bin. From where the lid can be opened, the free hand cannot reach the can: the robot must hold the lid open and side-step about 0.3 m. Hand points 0.73-1.26 m.",
     "success": "The can is inside the bin and at rest, the lid is shut and the hand has not been caught.",
@@ -642,7 +642,7 @@ const examples = {
       }
     ],
     "status": "Scene changed on 2026-11-27: the paper bag is replaced by an empty can that can be released above the opening. The scene self-check passes. A pose-only reach check with side grasps found no solution; top-down grasps were not tried. Feasibility is checked by human teleoperation. Server integration and an end-to-end trial are pending.",
-    "pending": "The first sentence still names the paper bag; a new sentence awaits approval. The minimum opening angle and episode limits are pending. The can is a food can, not an aluminium drink can: no drink-can asset with 4096 textures was found.",
+    "pending": "The minimum opening angle and episode limits are pending. The can is a food can, not an aluminium drink can: no drink-can asset with 4096 textures was found.",
     "images": [
       {
         "src": "images/n03-scene.png",
