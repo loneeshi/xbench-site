@@ -318,13 +318,13 @@ const recordings = {
       "kind": "mechanism",
       "scope": "full",
       "file": "media/n03-mechanism.mp4",
-      "originalSha256": "4563119b219c870daaa3644f9450dccfc86541bd253c27d2cb4888f9d6630e9a",
-      "publicSha256": "80f283cadecdb482458abaa7c0e913b23fe5a5e7367cd8ba90c67b6229ec29cc",
+      "originalSha256": "32db8981648861a12e520ba3652272b810c29f1223e0ab8a6fdc02ea0b7ceea4",
+      "publicSha256": "b662e991b00185acfbc37e385f447b47993322982da760cf4c7e7a0845071fea",
       "label": "Mechanism demo · robot stays still · not a solution",
-      "outcome": "The lid of the blue wheelie bin is released once from 75 deg and once from 60 deg and closes by itself: within 5 deg after 1.01 s and 0.61 s of physics time, without bouncing open. A grip was added to the lid front. The robot keeps its start pose and is out of view.",
+      "outcome": "The lid of the blue wheelie bin is released once from 75 deg and once from 60 deg and closes by itself: within 5 deg after 1.01 s and 0.61 s of physics time, without bouncing open. The item to throw away is now an empty can (on the cart's top shelf, out of view) instead of the paper bag. The robot keeps its start pose and is out of view.",
       "robotModel": "RB-Y1 M v1.3",
       "clock": "Physics at 1/120 s per step (verified); 5 s per release, one frame every 8 steps at 15 fps, so the clip plays in real physics time; 10 s clip",
-      "renderDateUTC": "2026-11-27"
+      "renderDateUTC": "2026-11-28"
     }
   ],
   "N05": [
